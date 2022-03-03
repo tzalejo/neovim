@@ -10,12 +10,18 @@ vim.g.mapleader = " "
 mapper("n", "<Leader>w", ":w!<CR>")
 mapper("n", "<Leader>q", ":q<CR>")
 mapper("n", "mq", ":qa!<CR>")
+mapper("n", "qq", ":q!<CR>")
 
 --Agregar ventana a la derecha..
 mapper("n", ",h", ":vsp<CR>")
 
 -- Abrir Terminal
 mapper("n", "<C-t>", ":split<CR>:ter<CR>:resize 15<CR>")
+
+-- Menu desplegable NERDTree
+nmap <Leader>nt :NERDTreeFind<CR>
+vmap ++ <plug>NERDCommenterToggle
+nmap ++ <plug>NERDCommenterToggle
 
 -- Comentar
 mapper("n","<C-p>", ":Commentary<CR>")
