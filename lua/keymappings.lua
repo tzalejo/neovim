@@ -19,9 +19,7 @@ mapper("n", ",h", ":vsp<CR>")
 mapper("n", "<C-t>", ":split<CR>:ter<CR>:resize 15<CR>")
 
 -- Menu desplegable NERDTree
-nmap <Leader>nt :NERDTreeFind<CR>
-vmap ++ <plug>NERDCommenterToggle
-nmap ++ <plug>NERDCommenterToggle
+mapper("n", "<Leader>nt", ":NERDTreeFind<CR>")
 
 -- Comentar
 mapper("n","<C-p>", ":Commentary<CR>")
