@@ -25,6 +25,11 @@ mapper("n", "<Leader>nn", ":NvimTreeClose<CR>")
 -- Duplitcate Line
 mapper("n", "tt", ":t.<CR>")
 
+-- Busqueda en un archivo
+mapper('n', 'f', ":HopWord<CR>")
+mapper('n', 'F', ":HopPattern<CR>")
+mapper('n', 'ff', ":HopChar2<CR>")
+
 -- Change Buffer
 mapper("n", "<C-M>", ":bnext<CR>")
 mapper("n", "<C-N>", ":bprev<CR>")
