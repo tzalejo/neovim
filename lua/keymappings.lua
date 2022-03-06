@@ -19,10 +19,8 @@ mapper("n", ",h", ":vsp<CR>")
 mapper("n", "<C-t>", ":split<CR>:ter<CR>:resize 15<CR>")
 
 -- Menu desplegable NERDTree
-mapper("n", "<Leader>nt", ":NERDTreeFind<CR>")
-
--- Comentar
-mapper("n","<C-p>", ":Commentary<CR>")
+mapper("n", "<Leader>nt", ":NvimTreeOpen<CR>")
+mapper("n", "<Leader>nn", ":NvimTreeClose<CR>")
 
 -- Duplitcate Line
 mapper("n", "tt", ":t.<CR>")
@@ -95,3 +93,6 @@ vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+
+
+

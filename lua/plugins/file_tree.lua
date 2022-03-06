@@ -1,27 +1,93 @@
 local g = vim.g
 
-g.nvim_tree_side = "left"
-g.nvim_tree_width = 30
-g.nvim_tree_auto_close = 0
-g.nvim_tree_auto_open = 1
-g.nvim_tree_quit_on_open = 0
-g.nvim_tree_hide_dotfiles = 1
-g.nvim_tree_width_allow_resize = true
-g.nvim_tree_disable_netrw = 1
-g.nvim_tree_follow = 1
-g.nvim_tree_indent_markers = 1
-g.nvim_tree_git_hl = 1
-g.nvim_tree_allow_resize = 1
-g.nvim_tree_show_icons = {git = 1, folders = 1, files = 1}
-g.nvim_tree_icons = {
-  default = "",
-  symlink = "",
-  git = {
-    unstaged = "✗",
-    staged = "✓",
-    unmerged = "",
-    renamed = "➜",
-    untracked = "★"
+g.nvim_tree_width           = 30
+g.nvim_tree_auto_open       = 1
+g.nvim_tree_indent_markers  = 1
+g.termguicolors             = true
+g.nvim_tree_auto_close      = 1
+
+require'nvim-tree'.setup{
+  auto_open            = 1,
+  auto_close           = 1,
+  disable_netrw        = false,
+  hijack_netrw         = true,
+  open_on_setup        = false,
+  ignore_buffer_on_setup = false,
+  ignore_ft_on_setup   = {},
+  auto_close           = false,
+  auto_reload_on_write = true,
+  open_on_tab          = false,
+  hijack_cursor        = false,
+  update_cwd           = false,
+  hijack_unnamed_buffer_when_opening = false,
+  hijack_directories   = {
+    enable    = true,
+    auto_open = true,
   },
-  folder = {default = "", open = ""}
+  diagnostics          = {
+    enable   = false,
+    icons    = {
+     hint    = "",
+     info    = "",
+     warning = "",
+     error   = "",    
+   }
+  },
+  update_focused_file  = {
+    enable      = false,
+    update_cwd  = false,
+    ignore_list = {}
+  },
+  system_open          = {
+    cmd  = nil,
+    args = {}
+  },
+  filters              = {
+    dotfiles = false,
+    custom   = {}
+  },
+  git                  = {
+    enable  = true,
+    ignore  = true,
+    timeout = 500,
+  },
+  view                 = {
+    width                       = 30,
+    height                      = 30,
+    hide_root_folder            = false,
+    side                        = 'left',
+    preserve_window_proportions = false,
+    mappings                    = {
+      custom_only = false,
+      list        = {}
+    },
+    number                      = false,
+    relativenumber              = false,
+    signcolumn                  = "yes"
+  },
+  trash                 = {
+    cmd             = "trash",
+    require_confirm = true
+  },
+  actions               = {
+    change_dir  = {
+      enable    = true,
+      global    = false,
+    },
+    open_file           = {
+      quit_on_open  = false,
+      resize_window = false,
+      window_picker = {
+        enable  = true,
+        chars   = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890",
+        exclude = {
+          filetype = { "notify", "packer", "qf", "diff", "fugitive", "fugitiveblame", },
+          buftype  = { "nofile", "terminal", "help", },
+        }
+      }
+    }
+  }
 }
+
+
+

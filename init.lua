@@ -6,3 +6,5 @@ require('keymappings')
 require('plugins')
 -- Language Server Provider
 require('lsp')
+
+-- FIX Error en ele init, revisar!

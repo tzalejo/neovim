@@ -22,3 +22,5 @@ require('plugins.autopairs')
 require('plugins.hop')
 -- Troubles
 require("plugins.trouble")
+-- Para realizar comentarios
+require('plugins.kommentary')

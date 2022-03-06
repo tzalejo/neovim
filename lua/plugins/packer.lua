@@ -2,8 +2,11 @@ return require("packer").startup(
   function()
     use {"wbthomason/packer.nvim"}
     use {"UltiRequiem/nvim-snippets"}
-    use {"kyazdani42/nvim-tree.lua"}
-    use {"kyazdani42/nvim-web-devicons"}
+    use {"kyazdani42/nvim-tree.lua",
+      requires = {
+      'kyazdani42/nvim-web-devicons', -- optional, for file icon
+      },  
+    }
     use {"folke/todo-comments.nvim"}
     use {"terrortylor/nvim-comment"}
     use {"nvim-lua/plenary.nvim"}
@@ -29,6 +32,8 @@ return require("packer").startup(
     use {"folke/tokyonight.nvim"}
     use {"nvim-treesitter/nvim-treesitter"}
     use {"ahmedkhalf/lsp-rooter.nvim"}
+    --Comentario
+    use {"b3nj5m1n/kommentary"}
 
     -- javascript
     -- Javascript Bundle
