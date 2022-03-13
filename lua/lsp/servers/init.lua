@@ -1,11 +1,11 @@
 -- Lua
----require('lsp.servers.sunmeko')
+-- require('lsp.servers.sunmeko')
 -- Python
 ---irequire('lsp.servers.pyright')
 -- JavaScript
 require('lsp.servers.tsserver')
---require('lsp.servers.eslint_d')
+require('lsp.servers.eslint_d')
 -- General Lenguage Server
---require('lsp.servers.efm')
+-- require('lsp.servers.efm')
 -- Vimscript
----require("lsp.servers.vim"::)
+-- require("lsp.servers.vim")
