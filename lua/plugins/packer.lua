@@ -34,6 +34,9 @@ return require("packer").startup(
     use {"ahmedkhalf/lsp-rooter.nvim"}
     --Comentario
     use {"b3nj5m1n/kommentary"}
+   
+    -- Para realizar reemplazo de caracteres
+    use {"tpope/vim-surround"}
 
     -- javascript
     -- Javascript Bundle
