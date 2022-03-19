@@ -18,7 +18,7 @@ require('telescope').setup({
     },
     initial_mode = 'insert',
     prompt_prefix = ' ❯',
-    file_ignore_patterns = { '.git/*', 'node_modules', 'env/*' },
+    file_ignore_patterns = { '.git/*', 'node_modules', 'env/*', 'vendor' },
     color_devicons = true,
     winblend = 20,
     file_sorter = sorters.get_fzy_sorter,
@@ -50,4 +50,19 @@ require('telescope').setup({
 })
 
 -- Load Telescope extensions
+require('telescope').load_extension('media_files')
 require('telescope').load_extension('fzy_native')
+
+
+-- Quickly change something on your settings
+local M = {}
+M.search_dotfiles = function()
+    require("telescope.builtin").find_files({
+        prompt_title = "UltiVim Config",
+        cwd = "$HOME/.config/nvim"
+    })
+end
+
+return M
+
+
