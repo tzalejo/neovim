@@ -4,7 +4,7 @@
 ---irequire('lsp.servers.pyright')
 -- JavaScript
 require('lsp.servers.tsserver')
-require('lsp.servers.eslint_d')
+-- require('lsp.servers.eslint_d')
 -- General Lenguage Server
 -- require('lsp.servers.efm')
 -- Vimscript
