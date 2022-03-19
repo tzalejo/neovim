@@ -93,10 +93,6 @@ mapper("n", ",f", ":HopWord<CR>")
 mapper("n", ",l", ":HopLine<CR>")
 mapper("n", ",o", ":HopPattern<CR>")
 
--- File Tree Explorer
-mapper("n", "<Leader>e", ":NvimTreeToggle<CR>")
-mapper("n", ",r", ":NvimTreeRefresh<CR>")
-
 -- Completion
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
 vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})

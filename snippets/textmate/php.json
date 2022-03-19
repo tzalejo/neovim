@@ -1,0 +1,14 @@
+{
+  "console.log": {
+    "prefix": "ee",
+    "body": ["echo $1;"],
+    "description": "Code snippet for \"echo \""
+  },
+  "function nombre": {
+    "prefix": "fn",
+    "body": ["function $1(){| $2; |}"],
+    "description": "Code snippet for \"function \""
+  }
+}
+
+

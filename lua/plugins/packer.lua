@@ -54,5 +54,8 @@ return require("packer").startup(
     use {'tpope/vim-projectionist'}
     use {'noahfrederick/vim-composer'}
     use {'noahfrederick/vim-laravel'}
+    
+    -- coc
+    use {'neoclide/coc.nvim', branch = 'release'}
   end
 )

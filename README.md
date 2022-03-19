@@ -24,3 +24,21 @@ If you think your configuration is cool, make a pull request and include it!
 
 ### License
 See [LICENSE](./LICENSE).
+
+
+
+### Instalar coc
+
+curl -sL install-node.vercel.app/lts | bashi
+
+" Use release branch (recommend)
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+Install extensions like:
+
+:CocInstall coc-json coc-tsserver
+
+Crear archivo de configuracion(coc-setting.json):
+
+:CocConfig  
+
