@@ -35,16 +35,20 @@ $ sudo apt-get install neovim python3-neovim
 
 Para poder visualizar los iconos en la terminal es necesario tener un tipo de letra que lo soporte, en lo personal a mi me gustan las Nerdfonts.
 
-Puedes descargar DejaVuSansMono Nerd Font.
+Puedes descargar DejaVuSansMono Nerd Font. url: https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip
 
 Una vez que hayas descargado el archivo, descomprimelo y copia los archivos (*.ttf) al siguiente directorio:
 
 $HOME/.local/share/fonts/
 Si por alguna razón no tienes el directorio, lo puedes crear.
 
+https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip
 Ya que hayas copiado los archivos, para poder utilizar este nuevo tipo de letra, debes ejecutar:
 
 $ fc-cache -fv
+
+
+://linuxfacil.mx/images/posts/neovim-python/nerdfont-terminal.png 
 
 
 ### Instalar coc url: https://github.com/neoclide/coc.nvim/wiki/Language-servers
