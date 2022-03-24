@@ -40,15 +40,12 @@ Puedes descargar DejaVuSansMono Nerd Font. url: https://github.com/ryanoasis/ner
 Una vez que hayas descargado el archivo, descomprimelo y copia los archivos (*.ttf) al siguiente directorio:
 
 $HOME/.local/share/fonts/
+
 Si por alguna razón no tienes el directorio, lo puedes crear.
 
-https://github.com/ryanoasis/nerd-fonts/releases/download/v2.1.0/DejaVuSansMono.zip
 Ya que hayas copiado los archivos, para poder utilizar este nuevo tipo de letra, debes ejecutar:
 
 $ fc-cache -fv
-
-
-://linuxfacil.mx/images/posts/neovim-python/nerdfont-terminal.png 
 
 
 ### Instalar coc url: https://github.com/neoclide/coc.nvim/wiki/Language-servers
