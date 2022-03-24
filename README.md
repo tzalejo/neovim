@@ -25,6 +25,26 @@ If you think your configuration is cool, make a pull request and include it!
 ### License
 See [LICENSE](./LICENSE).
 
+### Neovim
+
+Por supuesto, debemos tener instalado Neovim con soporte para python, si no lo tienes aún, lo puedes instalar de la siguiente manera:
+
+$ sudo apt-get install neovim python3-neovim
+
+### Nerdfont (Tipo de Letra)
+
+Para poder visualizar los iconos en la terminal es necesario tener un tipo de letra que lo soporte, en lo personal a mi me gustan las Nerdfonts.
+
+Puedes descargar DejaVuSansMono Nerd Font.
+
+Una vez que hayas descargado el archivo, descomprimelo y copia los archivos (*.ttf) al siguiente directorio:
+
+$HOME/.local/share/fonts/
+Si por alguna razón no tienes el directorio, lo puedes crear.
+
+Ya que hayas copiado los archivos, para poder utilizar este nuevo tipo de letra, debes ejecutar:
+
+$ fc-cache -fv
 
 
 ### Instalar coc url: https://github.com/neoclide/coc.nvim/wiki/Language-servers
