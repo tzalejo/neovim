@@ -27,7 +27,7 @@ See [LICENSE](./LICENSE).
 
 
 
-### Instalar coc
+### Instalar coc url: https://github.com/neoclide/coc.nvim/wiki/Language-servers
 
 curl -sL install-node.vercel.app/lts | bashi
 
@@ -36,7 +36,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Install extensions like:
 
-:CocInstall coc-json coc-tsserver
+:CocInstall coc-json coc-tsserver coc-html 
 
 Crear archivo de configuracion(coc-setting.json):
 

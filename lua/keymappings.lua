@@ -27,6 +27,7 @@ mapper("n", "tt", ":t.<CR>")
 
 -- Busqueda en un archivo
 mapper('n', 'f', ":HopWord<CR>")
+mapper('n', 'f', ":HopWord<CR>")
 mapper('n', 'F', ":HopPattern<CR>")
 mapper('n', 'ff', ":HopChar2<CR>")
 

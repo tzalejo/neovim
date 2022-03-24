@@ -57,5 +57,15 @@ return require("packer").startup(
     
     -- coc
     use {'neoclide/coc.nvim', branch = 'release'}
+
+
+
+-- " html
+-- "" HTML Bundle
+    use {'hail2u/vim-css3-syntax'}
+    use {'gko/vim-coloresque'}
+    use {'tpope/vim-haml'}
+    use {'mattn/emmet-vim'}
+
   end
 )

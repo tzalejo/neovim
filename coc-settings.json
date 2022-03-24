@@ -1,11 +1,45 @@
 {
   "languageserver": {
+    "intelephense": {
+        "command": "intelephense",
+        "args": ["--stdio"],
+        "filetypes": ["php"],
+        "initializationOptions": {
+            "storagePath": "/tmp/intelephense"
+        }
     },
-  
-// Javascript and TypeScript
+    
+    "dockerfile": {
+        "command": "docker-langserver",
+        "filetypes": ["dockerfile"],
+        "args": ["--stdio"]
+    },
+    
+    "sql": {   
+        "command": "sql-language-server",
+        "args" : ["up", "--method", "stdio"],
+        "filetypes": ["sql", "mysql"]
+    }
+
+  },    
+
+  // Javascript and TypeScript
   "typescript.autoClosingTags": true,
   "javascript.autoClosingTags": true,
-  
+ 
+  // html
+  "html.filetypes":[
+      "html",
+      "handlebars",
+      "htmldjango",
+      "blade"
+  ],
+  "html.format.enable": true,
+  "html.hover.documentation": true,
+  "html.trace.server":"off",
+  "html.validate.html": true,
+  "html.validate.styles":true,
+  "html.suggest.html5": true,
 
 
   // Snippets
