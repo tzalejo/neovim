@@ -36,7 +36,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 Install extensions like:
 
-:CocInstall coc-json coc-tsserver coc-html 
+:CocInstall coc-json coc-tsserver coc-html (https://github.com/neoclide/coc-html)
 
 Crear archivo de configuracion(coc-setting.json):
 
