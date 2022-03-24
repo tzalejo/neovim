@@ -26,7 +26,7 @@ mapper("n", "<Leader>nn", ":NvimTreeClose<CR>")
 mapper("n", "tt", ":t.<CR>")
 
 -- Busqueda en un archivo
-mapper('n', 'f', ":HopWord<CR>")
+-- Hop.nvim
 mapper('n', 'f', ":HopWord<CR>")
 mapper('n', 'F', ":HopPattern<CR>")
 mapper('n', 'ff', ":HopChar2<CR>")
@@ -77,22 +77,17 @@ mapper("n", "<Leader>fs", ":Telescope find_files<CR>")
 -- mapper("n", "<Leader>sm", ":Telescope help_tags<CR>")
 -- mapper("n", "<Leader>sb", ":Telescope buffers<CR>")
 -- mapper("n", "<Leader>ft", ":lua require('plugins.telescope').search_dotfiles()<CR>")
-mapper("n", "<Leader>st", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
+-- mapper("n", "<Leader>st", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 -- mapper("n", "<Leader>sm", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 -- mapper("n", "<Leader>sb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 
 -- Troubles
-mapper("n", "<leader>xx", "<cmd>Trouble<cr>")
-mapper("n", "<leader>xw", "<cmd>Trouble lsp_workspace_diagnostics<cr>")
+-- mapper("n", "<leader>xx", "<cmd>Trouble<cr>")
+--[[ mapper("n", "<leader>xw", "<cmd>Trouble lsp_workspace_diagnostics<cr>")
 mapper("n", "<leader>xd", "<cmd>Trouble lsp_document_diagnostics<cr>")
 mapper("n", "<leader>xl", "<cmd>Trouble loclist<cr>")
 mapper("n", "<leader>xq", "<cmd>Trouble quickfix<cr>")
-mapper("n", "gR", "<cmd>Trouble lsp_references<cr>")
-
--- Hop.nvim
-mapper("n", ",f", ":HopWord<CR>")
-mapper("n", ",l", ":HopLine<CR>")
-mapper("n", ",o", ":HopPattern<CR>")
+mapper("n", "gR", "<cmd>Trouble lsp_references<cr>") ]]
 
 -- Completion
 vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
