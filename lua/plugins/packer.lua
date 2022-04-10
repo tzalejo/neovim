@@ -58,10 +58,11 @@ return require("packer").startup(
     -- coc
     use {'neoclide/coc.nvim', branch = 'release'}
 
+    -- para mejor los tiempos de carga 
+    use {'lewis6991/impatient.nvim'}
 
-
--- " html
--- "" HTML Bundle
+    -- html
+    -- HTML Bundle
     use {'hail2u/vim-css3-syntax'}
     use {'gko/vim-coloresque'}
     use {'tpope/vim-haml'}
