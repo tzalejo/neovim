@@ -18,14 +18,18 @@ return require("packer").startup(
     use {"SirVer/ultisnips"}
     use {"folke/trouble.nvim"}
     use {"nvim-treesitter/playground"}
+
     use {
       "nvim-telescope/telescope.nvim",
       requires = {
-        {"nvim-lua/plenary.nvim"},
-        {"nvim-telescope/telescope-fzy-native.nvim"},
-        {"nvim-telescope/telescope-media-files.nvim"}
+        { 'nvim-lua/plenary.nvim'},
+        { 'nvim-lua/popup.nvim' },
+        { 'nvim-telescope/telescope-fzy-native.nvim'},
+        { 'kyazdani42/nvim-web-devicons'},
+        { 'nvim-telescope/telescope-file-browser.nvim'}
       }
     }
+    
     use {"folke/lua-dev.nvim"}
     use {"hoob3rt/lualine.nvim"}
     use {"hrsh7th/nvim-compe"}

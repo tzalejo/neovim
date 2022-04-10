@@ -50,7 +50,7 @@ require('telescope').setup({
 })
 
 -- Load Telescope extensions
-require('telescope').load_extension('media_files')
+--require('telescope').load_extension('media_files')
 require('telescope').load_extension('fzy_native')
 
 

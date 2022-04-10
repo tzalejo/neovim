@@ -2,7 +2,7 @@
 pcall(require, 'impatient')
 
 -- Para que si al iniciar vim no esta instalado packer, se instale automaticamente.
-if require 'script.first_load'() then
+if require "script.first_load"() then
   return
 end
 
@@ -15,4 +15,3 @@ require('plugins')
 -- Language Server Provider
 require('lsp')
 
--- FIX Error en ele init, revisar!
