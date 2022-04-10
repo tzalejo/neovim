@@ -1,7 +1,7 @@
 local g = vim.g
 
 g.nvim_tree_width           = 30
-g.nvim_tree_auto_open       = 1
+g.open_on_setup             = 1
 g.nvim_tree_indent_markers  = 1
 g.termguicolors             = true
 g.nvim_tree_auto_close      = 1
