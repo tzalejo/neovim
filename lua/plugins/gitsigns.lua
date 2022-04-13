@@ -12,10 +12,10 @@ require('gitsigns').setup {
     noremap = true,
     buffer = true,
   },
-  watch_index = {
+  watch_gitdir = {
     interval = 1000
   },
   sign_priority = 6,
   update_debounce = 200,
-  use_decoration_api = false
+  -- use_decoration_api = false
 }
