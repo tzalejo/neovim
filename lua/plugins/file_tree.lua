@@ -1,28 +1,22 @@
-local g = vim.g
-
-g.nvim_tree_width           = 30
-g.open_on_setup             = 1
-g.nvim_tree_indent_markers  = 1
-g.termguicolors             = true
-g.auto_close                = 1
-
 require'nvim-tree'.setup{
-  auto_open            = 1,
-  auto_close           = 1,
+  sort_by = "Alejandro",
   disable_netrw        = false,
   hijack_netrw         = true,
   open_on_setup        = false,
   ignore_buffer_on_setup = false,
   ignore_ft_on_setup   = {},
-  auto_close           = false,
   auto_reload_on_write = true,
-  open_on_tab          = false,
   hijack_cursor        = false,
   update_cwd           = false,
   hijack_unnamed_buffer_when_opening = false,
+
+  auto_open            = true,
+  -- auto_close           = false,
+  open_on_tab          = true,-- al hacer tab sobre el archivo me muestra, abriendolo.
+
   hijack_directories   = {
     enable    = true,
-    auto_open = true,
+    -- auto_open = true,
   },
   diagnostics          = {
     enable   = false,
@@ -30,13 +24,13 @@ require'nvim-tree'.setup{
      hint    = "",
      info    = "",
      warning = "",
-     error   = "",    
+     error   = "",
    }
   },
   update_focused_file  = {
-    enable      = false,
+    enable      = true, -- muestra el archivo abierto en el arbol.
     update_cwd  = false,
-    ignore_list = {}
+    ignore_list = {'env'}
   },
   system_open          = {
     cmd  = nil,
@@ -54,9 +48,9 @@ require'nvim-tree'.setup{
   view                 = {
     width                       = 30,
     height                      = 30,
-    hide_root_folder            = false,
+    hide_root_folder            = true, -- Para que no muestre la carpeta raiz.
     side                        = 'left',
-    preserve_window_proportions = false,
+    preserve_window_proportions = true,
     mappings                    = {
       custom_only = false,
       list        = {}
