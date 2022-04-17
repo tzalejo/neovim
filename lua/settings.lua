@@ -5,6 +5,9 @@ local g,o,bo,wo,cmd,fn = vim.g,vim.o,vim.bo,vim.wo,vim.cmd,vim.fn
 g.syntax_on = true
 o.synmaxcol = 1500
 
+-- comando que elimina los espcio en blanco
+cmd([[autocmd BufWritePre * :%s/\s\+$//e ]])
+
 -- Fold Stuff
 wo.foldenable = false
 wo.foldnestmax = 10
