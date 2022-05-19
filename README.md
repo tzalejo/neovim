@@ -75,3 +75,7 @@ Crear archivo de configuracion(coc-setting.json):
 
 - ubuntu
   $ sudo apt-get install ripgrep
+
+## tree-sitter
+
+$ npm install -g tree-sitter-cli
