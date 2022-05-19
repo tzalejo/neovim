@@ -18,6 +18,8 @@ mapper("n", ",h", ":vsp<CR>")
 -- Abrir Terminal
 mapper("n", "<C-t>", ":split<CR>:ter<CR>:resize 15<CR>")
 
+mapper("n", "<Leader>h", ":CheckHealth<CR>")
+
 -- Menu desplegable NERDTree
 mapper("n", "<Leader>nt", ":NvimTreeOpen<CR>")
 mapper("n", "<Leader>nn", ":NvimTreeClose<CR>")
@@ -40,8 +42,8 @@ mapper("n", "<S-TAB>", ":bprevious<CR>")
 -- Resize with arrows
 mapper("n", "<C-Up>", ":resize -2<CR>")
 mapper("n", "<C-Down>", ":resize +2<CR>")
-mapper("n", "<C-Left>", ":vertical resize -2<CR>")
-mapper("n", "<C-Right>", ":vertical resize +2<CR>")
+mapper("n", "<C-Left>", ":vertical resize +2<CR>")
+mapper("n", "<C-Right>", ":vertical resize -2<CR>")
 
 -- Better window movement
 mapper("n", "<C-h>", "<C-w>h")
@@ -72,14 +74,15 @@ mapper("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 -- Plugins Mappings ↓
 
 -- Telescope
-mapper("n", "<Leader>st", ":Telescope live_grep<CR>")
+-- mapper("n", "<Leader>st", ":Telescope live_grep<CR>")
 mapper("n", "<Leader>fs", ":Telescope find_files<CR>")
+
 -- mapper("n", "<Leader>sm", ":Telescope help_tags<CR>")
 -- mapper("n", "<Leader>sb", ":Telescope buffers<CR>")
 -- mapper("n", "<Leader>ft", ":lua require('plugins.telescope').search_dotfiles()<CR>")
--- mapper("n", "<Leader>st", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
+mapper("n", "<Leader>st", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 -- mapper("n", "<Leader>sm", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
--- mapper("n", "<Leader>sb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
+mapper("n", "<Leader>sb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 
 -- Troubles
 -- mapper("n", "<leader>xx", "<cmd>Trouble<cr>")
