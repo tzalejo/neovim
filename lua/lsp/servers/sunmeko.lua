@@ -1,7 +1,10 @@
 -- yay -S lua-language-server
+local system_name = "Linux" -- (Linux, macOS, or Windows)
+local sumneko_root_path = '/path/to/lua-language-server'
+local sumneko_binary = sumneko_root_path.."/bin/"..system_name.."/lua-language-server"
 
 require'lspconfig'.sumneko_lua.setup {
-  cmd = {"lua-language-server"},
+  cmd = {sumneko_binary, "-E", sumneko_root_path .. "/main.lua"}, --{"lua-language-server"},
   on_attach = require'lsp.utils'.common_on_attach,
   settings = {
     Lua = {
@@ -9,7 +12,7 @@ require'lspconfig'.sumneko_lua.setup {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
         version = 'LuaJIT',
         -- Setup your lua path
-        path = '/usr/bin/luajit'
+        path = vim.split(package.path, ';')
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global

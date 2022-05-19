@@ -14,4 +14,5 @@ require('keymappings')
 require('plugins')
 -- Language Server Provider
 require('lsp')
-
+require('plugins.telescope.setup')
+require('plugins.telescope.mappings')

@@ -13,9 +13,9 @@ require('plugins.lualine')
 -- Todo Comments
 require('plugins.todo')
 -- Completion
-require('plugins.compe')
+--require('plugins.compe')
 -- Git
---require('plugins.gitsigns')
+require('plugins.gitsigns')
 -- Autopairs
 require('plugins.autopairs')
 -- Easy Motion

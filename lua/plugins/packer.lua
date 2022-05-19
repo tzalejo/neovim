@@ -1,3 +1,6 @@
+-- vim.cmd [[packadd packer.nvim]]
+-- vim.cmd([[autocmd BufWritePost plugins.lua source <afile> | PackerCompile]])
+
 return require("packer").startup(
   function()
     use {"wbthomason/packer.nvim"}
@@ -5,7 +8,7 @@ return require("packer").startup(
     use {"kyazdani42/nvim-tree.lua",
       requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
-      },  
+      },
     }
     use {"folke/todo-comments.nvim"}
     use {"terrortylor/nvim-comment"}
@@ -19,8 +22,9 @@ return require("packer").startup(
     use {"folke/trouble.nvim"}
     use {"nvim-treesitter/playground"}
 
+    -- Telescope
     use {
-      "nvim-telescope/telescope.nvim",
+      'nvim-telescope/telescope.nvim',
       requires = {
         { 'nvim-lua/plenary.nvim'},
         { 'nvim-lua/popup.nvim' },
@@ -29,7 +33,32 @@ return require("packer").startup(
         { 'nvim-telescope/telescope-file-browser.nvim'}
       }
     }
-    
+
+    use {'nvim-telescope/telescope-dap.nvim'}
+    use {'rcarriga/nvim-notify'}
+    use {'nvim-telescope/telescope-ui-select.nvim'}
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+
+    ---
+
+    use {
+        'leoluz/nvim-dap-go',
+        requires = {
+            'rcarriga/nvim-dap-ui',
+            'mfussenegger/nvim-dap',
+            "Pocco81/DAPInstall.nvim",
+            'leoluz/nvim-dap-go',
+        }
+    }
+
+    use {
+      "ThePrimeagen/git-worktree.nvim",
+      config = function()
+        require("git-worktree").setup {}
+      end,
+    }
+
+
     use {"folke/lua-dev.nvim"}
     use {"hoob3rt/lualine.nvim"}
     use {"hrsh7th/nvim-compe"}
@@ -54,11 +83,11 @@ return require("packer").startup(
     use {'rayburgemeestre/phpfolding.vim'}
 
     -- laravel
-    use {'tpope/vim-dispatch'}
+    use {'noahfrederick/vim-laravel'}
     use {'tpope/vim-projectionist'}
     use {'noahfrederick/vim-composer'}
-    use {'noahfrederick/vim-laravel'}
-    
+    use {'tpope/vim-dispatch'}
+
     -- coc
     use {'neoclide/coc.nvim', branch = 'release'}
 
