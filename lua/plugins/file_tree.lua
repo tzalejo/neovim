@@ -10,13 +10,10 @@ require'nvim-tree'.setup{
   update_cwd           = false,
   hijack_unnamed_buffer_when_opening = false,
 
-  auto_open            = true,
-  -- auto_close           = false,
   open_on_tab          = true,-- al hacer tab sobre el archivo me muestra, abriendolo.
 
   hijack_directories   = {
     enable    = true,
-    -- auto_open = true,
   },
   diagnostics          = {
     enable   = false,
@@ -30,7 +27,7 @@ require'nvim-tree'.setup{
   update_focused_file  = {
     enable      = true, -- muestra el archivo abierto en el arbol.
     update_cwd  = false,
-    ignore_list = {'env'}
+    ignore_list = {}
   },
   system_open          = {
     cmd  = nil,
