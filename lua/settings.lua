@@ -195,4 +195,4 @@ g.loaded_matchparen = 1
 g.loaded_spec = 1
 
 -- I use Archlinux so it's simply:
---g.python3_host_prog = '/usr/bin/python'
+g.python3_host_prog = '/usr/bin/python'
