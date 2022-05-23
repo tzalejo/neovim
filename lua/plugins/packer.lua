@@ -60,7 +60,10 @@ return require("packer").startup(
 
 
     use {"folke/lua-dev.nvim"}
-    use {"hoob3rt/lualine.nvim"}
+    -- use {"hoob3rt/lualine.nvim"}
+    use {'nvim-lualine/lualine.nvim',
+      requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
     use {"hrsh7th/nvim-compe"}
     use {"neovim/nvim-lspconfig"}
     use {"folke/tokyonight.nvim"}
@@ -68,7 +71,7 @@ return require("packer").startup(
     use {"ahmedkhalf/lsp-rooter.nvim"}
     --Comentario
     use {"b3nj5m1n/kommentary"}
-   
+
     -- Para realizar reemplazo de caracteres
     use {"tpope/vim-surround"}
 
@@ -91,7 +94,7 @@ return require("packer").startup(
     -- coc
     use {'neoclide/coc.nvim', branch = 'release'}
 
-    -- para mejor los tiempos de carga 
+    -- para mejor los tiempos de carga
     use {'lewis6991/impatient.nvim'}
 
     -- html
