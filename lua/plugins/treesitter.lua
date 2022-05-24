@@ -1,5 +1,5 @@
 require "nvim-treesitter.configs".setup {
-  ensure_installed = "all",
+  ensure_installed = "bash, css, dockerfile, hjson, http, html, graphql, javascript, json, json5, lua, make, php, phpdoc, python, scss, slint, solidity, typescript, vue, vim, yaml ",
   highlight = {
     enable = true
   },
