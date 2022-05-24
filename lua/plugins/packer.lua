@@ -67,7 +67,7 @@ return require("packer").startup(
     use {"hrsh7th/nvim-compe"}
     use {"neovim/nvim-lspconfig"}
     use {"folke/tokyonight.nvim"}
-    use {"nvim-treesitter/nvim-treesitter"}
+    use {"nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
     use {"ahmedkhalf/lsp-rooter.nvim"}
     --Comentario
     use {"b3nj5m1n/kommentary"}

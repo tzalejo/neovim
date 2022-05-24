@@ -43,8 +43,8 @@ require'nvim-tree'.setup{
     timeout = 500,
   },
   view                 = {
-    width                       = 30,
-    height                      = 30,
+    width                       = '20%',
+    -- height                      = '20%',
     hide_root_folder            = true, -- Para que no muestre la carpeta raiz.
     side                        = 'left',
     preserve_window_proportions = true,
