@@ -66,7 +66,9 @@ Crear archivo de configuracion(coc-setting.json):
 
 ## FD agregar via comando
 
-- mac
+- mac - usar terminal item2 - ver: https://www.youtube.com/watch?v=RNqDkF17ogY
+  $ brew install iterm2 --cask
+  $ brew install fish tmux
   $ brew install fd
 - ubuntu
   $ sudo apt-get install fd-find
