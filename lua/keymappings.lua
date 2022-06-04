@@ -12,7 +12,7 @@ mapper("n", "<Leader>q", ":q<CR>")
 mapper("n", "mq", ":qa!<CR>")
 mapper("n", "qq", ":q!<CR>")
 
---Agregar ventana a la derecha..
+-- Muestra el chequeo de instalaciones coc
 mapper("n", ",h", ":vsp<CR>")
 
 -- Abrir Terminal

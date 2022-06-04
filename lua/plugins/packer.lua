@@ -15,7 +15,7 @@ return require("packer").startup(
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}
     use {"glepnir/dashboard-nvim"}
-    use {"lewis6991/gitsigns.nvim"}
+    use {"lewis6991/gitsigns.nvim" , requires = { 'nvim-lua/plenary.nvim' }}
     use {"windwp/nvim-autopairs"}
     use {"phaazon/hop.nvim"}
     use {"SirVer/ultisnips"}
@@ -60,15 +60,34 @@ return require("packer").startup(
 
 
     use {"folke/lua-dev.nvim"}
-    use {"hoob3rt/lualine.nvim"}
+    use { 'nvim-lualine/lualine.nvim',
+         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+        }
+
+    -- use {"hoob3rt/lualine.nvim"}
     use {"hrsh7th/nvim-compe"}
     use {"neovim/nvim-lspconfig"}
+
+    use('lukas-reineke/indent-blankline.nvim') -- Adds a | to show indentation levels
+    use({ 'romgrk/barbar.nvim', requires = 'kyazdani42/nvim-web-devicons' }) -- tabline
+    use('stevearc/dressing.nvim') -- overrides the default vim input to provide better visuals
     use {"folke/tokyonight.nvim"}
+    use({ 'sindrets/diffview.nvim', requires = { 'nvim-lua/plenary.nvim', 'kyazdani42/nvim-web-devicons' } }) -- creates a tab focused on diff view and git history
+            use({
+            'wyattjsmith1/weather.nvim',
+            requires = {
+                'nvim-lua/plenary.nvim',
+            },
+        })
+    use('j-hui/fidget.nvim') -- status progress for lsp servers
+
+
     use {"nvim-treesitter/nvim-treesitter"}
     use {"ahmedkhalf/lsp-rooter.nvim"}
+
     --Comentario
     use {"b3nj5m1n/kommentary"}
-   
+
     -- Para realizar reemplazo de caracteres
     use {"tpope/vim-surround"}
 
@@ -91,7 +110,7 @@ return require("packer").startup(
     -- coc
     use {'neoclide/coc.nvim', branch = 'release'}
 
-    -- para mejor los tiempos de carga 
+    -- para mejor los tiempos de carga
     use {'lewis6991/impatient.nvim'}
 
     -- html

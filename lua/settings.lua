@@ -170,12 +170,12 @@ o.emoji = true
 o.ff = "unix"
 
 -- Tokyonight FTW
-g.tokyonight_style = "night"
-g.tokyonight_italic_functions = true
-g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
+-- g.tokyonight_style = "storm"
+-- g.tokyonight_italic_functions = true
+-- g.tokyonight_sidebars = { "qf", "vista_kind", "terminal", "packer" }
 -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-g.tokyonight_colors = { fg_gutter = "#686f89", comment = "#686f89", dark5 = "#C2C5D6", hint = "orange", error = "#ff0000" }
-cmd([[silent! colorscheme  tokyonight]])
+-- g.tokyonight_colors = { hint = "orange", error = "#ff0000" }
+-- cmd([[silent! colorscheme  tokyonight]])
 
 -- Bigger history
 g.history = 1000
