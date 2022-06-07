@@ -104,5 +104,6 @@ return require("packer").startup(
     use {'tpope/vim-haml'}
     use {'mattn/emmet-vim'}
 
+    use {'rhysd/git-messenger.vim'}
   end
 )
