@@ -6,7 +6,6 @@ end
 -- Git messenger
 mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 
-
 -- Define Mapleader
 vim.g.mapleader = " "
 
@@ -16,12 +15,14 @@ mapper("n", "<Leader>q", ":q<CR>")
 mapper("n", "mq", ":qa!<CR>")
 mapper("n", "qq", ":q!<CR>")
 
---Agregar ventana a la derecha..
-mapper("n", ",h", ":vsp<CR>")
+--Agregar ventana
+mapper("n", "<Leader>wh", ":split<CR>")
+mapper("n", "<Leader>wv", ":vsplit<CR>")
+mapper("n", "<Leader>wr", ":WinResizerStartResize<CR>")
 
 -- Abrir Terminal
 mapper("n", "<C-t>", ":split<CR>:ter<CR>:resize 15<CR>")
-
+-- Abre Ayuda Instalacion
 mapper("n", "<Leader>h", ":CheckHealth<CR>")
 
 -- Menu desplegable NERDTree
@@ -59,9 +60,9 @@ mapper("n", "<C-l>", "<C-w>l")
 mapper("n", "<Leader>s", ":LspInfo<CR>")
 mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
 mapper("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
-mapper("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>")
+-- mapper("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>")
 -- mapper("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
-mapper("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
+-- mapper("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
 -- mapper("n", "<space>wa", "<cmd>lua vim.lsp.buf.add_workspace_folder()<CR>")
 -- mapper("n", "<space>wr", "<cmd>lua vim.lsp.buf.remove_workspace_folder()<CR>")
 -- mapper("n", "<space>wl", "<cmd>lua print(vim.inspect(vim.lsp.buf.list_workspace_folders()))<CR>")

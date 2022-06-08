@@ -88,6 +88,9 @@ return require("packer").startup(
     --Comentario
     use {"b3nj5m1n/kommentary"}
 
+    -- Redimensionar
+    use {'dm1try/golden_size'}
+
     -- Para realizar reemplazo de caracteres
     use {"tpope/vim-surround"}
 
