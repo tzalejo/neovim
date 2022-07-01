@@ -36,7 +36,7 @@
   "html.suggest.html5": true,
 
   // Prettier  para formatear codigo.
-  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown"],
+  "coc.preferences.formatOnSaveFiletypes": ["css", "markdown", "javascript", "typescript", "php"],
 
   // Snippets
   "snippets.priority": 1,
