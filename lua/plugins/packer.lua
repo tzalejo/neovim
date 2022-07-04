@@ -14,7 +14,7 @@ return require("packer").startup(
     use {"terrortylor/nvim-comment"}
     use {"nvim-lua/plenary.nvim"}
     use {"nvim-lua/popup.nvim"}
-    use {"glepnir/dashboard-nvim"}
+    -- use {"glepnir/dashboard-nvim"}
     use {"lewis6991/gitsigns.nvim" , requires = { 'nvim-lua/plenary.nvim' }}
     use {"windwp/nvim-autopairs"}
     use {"phaazon/hop.nvim"}
@@ -120,5 +120,6 @@ return require("packer").startup(
     use {'tpope/vim-haml'}
     use {'mattn/emmet-vim'}
 
+    use {'rhysd/git-messenger.vim'}
   end
 )
