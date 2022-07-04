@@ -152,7 +152,7 @@ o.mouse = "a"
 o.ttyfast = true
 
 -- Set zsh as shell (which zsh)
-o.shell = "/usr/bin/zsh"
+-- o.shell = "/usr/bin/zsh"
 
 -- Highlight the screen line of the cursor with CursorLine
 wo.cursorline = true
