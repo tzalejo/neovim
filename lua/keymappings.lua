@@ -9,6 +9,9 @@ mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 -- Define Mapleader
 vim.g.mapleader = " "
 
+-- TODO vista de resaltadore utilizando telescope
+mapper("n", "<Leader>tt", ":TodoTelescope<CR>")
+
 -- Para recargar un archivo de forma manual
 -- nnoremap <leader>ss :source %<cr>
 mapper("n", "<Leader>ss", ":source %<CR>")

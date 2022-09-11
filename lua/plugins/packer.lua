@@ -21,7 +21,8 @@ return require("packer").startup(
       },
       tag = 'nightly'-- opcional, actualizado cada semana.
     }
-    -- Para resaltar y buscar comentarios de tareas pendientes como TODO, en su base HACKde BUGcódigo.
+    -- Para resaltar y buscar comentarios de tareas pendientes como TODO:, en su base HACKde BUGcódigo.
+    -- FIX: otro error de prueba
     use {
       "folke/todo-comments.nvim",
       requires = "nvim-lua/plenary.nvim",
