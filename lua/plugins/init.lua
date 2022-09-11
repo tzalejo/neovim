@@ -24,3 +24,5 @@ require('plugins.hop')
 require('plugins.trouble')
 -- Para realizar comentarios
 require('plugins.kommentary')
+-- Laravel adalessa
+require('plugins.adalessa')

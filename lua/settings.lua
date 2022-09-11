@@ -155,7 +155,7 @@ o.ttyfast = true
 o.shell = "/usr/bin/zsh"
 
 -- Highlight the screen line of the cursor with CursorLine
-wo.cursorline = true
+wo.cursorline = false
 
 -- Enables 24-bit RGB color in TUI
 o.termguicolors = true

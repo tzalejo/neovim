@@ -9,6 +9,10 @@ mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 -- Define Mapleader
 vim.g.mapleader = " "
 
+-- Para recargar un archivo de forma manual
+-- nnoremap <leader>ss :source %<cr>
+mapper("n", "<Leader>ss", ":source %<CR>")
+
 -- Save and Close
 mapper("n", "<Leader>w", ":w!<CR>")
 mapper("n", "<Leader>q", ":q<CR>")
@@ -28,6 +32,7 @@ mapper("n", "<Leader>h", ":CheckHealth<CR>")
 -- Menu desplegable NERDTree
 mapper("n", "<Leader>nt", ":NvimTreeOpen<CR>")
 mapper("n", "<Leader>nn", ":NvimTreeClose<CR>")
+mapper("n", "<Leader>nu", ":NvimTreeRefresh<CR>")
 
 -- Duplitcate Line
 mapper("n", "tt", ":t.<CR>")
@@ -56,10 +61,16 @@ mapper("n", "<C-j>", "<C-w>j")
 mapper("n", "<C-k>", "<C-w>k")
 mapper("n", "<C-l>", "<C-w>l")
 
+-- Coc
+mapper("n", "gd", "<Plug>(coc-definition)<CR>")
+mapper("n", "gD", "<Plug>(coc-implementation)<CR>")
+mapper("n", "gr", "<Plug>(coc-references)<CR>")
+mapper("n", "gf", "<Plug>(coc-declaration)<CR>")
+
 -- LSP
-mapper("n", "<Leader>s", ":LspInfo<CR>")
-mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
-mapper("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
+-- mapper("n", "<Leader>s", ":LspInfo<CR>")
+-- mapper("n", "gD", "<Cmd>lua vim.lsp.buf.declaration()<CR>")
+-- mapper("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
 -- mapper("n", "K", "<Cmd>lua vim.lsp.buf.hover()<CR>")
 -- mapper("n", "gi", "<cmd>lua vim.lsp.buf.implementation()<CR>")
 -- mapper("n", "<C-k>", "<cmd>lua vim.lsp.buf.signature_help()<CR>")
@@ -80,14 +91,12 @@ mapper("n", "gd", "<Cmd>lua vim.lsp.buf.definition()<CR>")
 
 -- Telescope
 -- mapper("n", "<Leader>st", ":Telescope live_grep<CR>")
-mapper("n", "<Leader>fs", ":Telescope find_files<CR>")
-
--- mapper("n", "<Leader>sm", ":Telescope help_tags<CR>")
 -- mapper("n", "<Leader>sb", ":Telescope buffers<CR>")
--- mapper("n", "<Leader>ft", ":lua require('plugins.telescope').search_dotfiles()<CR>")
+mapper("n", "<Leader>fs", ":Telescope find_files<CR>")
+mapper("n", "<Leader>sm", ":Telescope help_tags<CR>")
 mapper("n", "<Leader>st", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
--- mapper("n", "<Leader>sm", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 mapper("n", "<Leader>sb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
+
 
 -- Troubles
 -- mapper("n", "<leader>xx", "<cmd>Trouble<cr>")
@@ -98,10 +107,10 @@ mapper("n", "<leader>xq", "<cmd>Trouble quickfix<cr>")
 mapper("n", "gR", "<cmd>Trouble lsp_references<cr>") ]]
 
 -- Completion
-vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
-vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- vim.api.nvim_set_keymap("i", "<Tab>", "v:lua.tab_complete()", {expr = true})
+-- vim.api.nvim_set_keymap("s", "<Tab>", "v:lua.tab_complete()", {expr = true})
+-- vim.api.nvim_set_keymap("i", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
+-- vim.api.nvim_set_keymap("s", "<S-Tab>", "v:lua.s_tab_complete()", {expr = true})
 
 
 

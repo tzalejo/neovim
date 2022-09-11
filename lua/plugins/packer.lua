@@ -3,6 +3,16 @@
 
 return require("packer").startup(
   function()
+    -- plugin para usar con laravel
+    use({"adalessa/laravel.nvim",
+    requires = {
+        { "nvim-lua/plenary.nvim" },
+        { "rcarriga/nvim-notify" },
+        { "nvim-telescope/telescope.nvim" },
+      },
+    })
+
+
     use {"wbthomason/packer.nvim"}
     use {"UltiRequiem/nvim-snippets"}
     use {"kyazdani42/nvim-tree.lua",
@@ -19,7 +29,21 @@ return require("packer").startup(
     use {"windwp/nvim-autopairs"}
     use {"phaazon/hop.nvim"}
     use {"SirVer/ultisnips"}
-    use {"folke/trouble.nvim"}
+
+    --  lista para mostrar diagnósticos, referencias, resultados de telescopios,
+    --  soluciones rápidas y listas de ubicaciones para ayudarlo a resolver
+    --  todos los problemas que está causando su código.
+    use {"folke/trouble.nvim",
+    requires = "kyazdani42/nvim-web-devicons",
+    config = function()
+      require("trouble").setup {
+        -- your configuration comes here
+        -- -- or leave it empty to use the default settings
+        -- -- refer to the configuration section below
+      }
+    end
+    }
+
     use {"nvim-treesitter/playground"}
 
     -- Telescope
