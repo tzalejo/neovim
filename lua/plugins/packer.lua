@@ -19,6 +19,7 @@ return require("packer").startup(
       requires = {
       'kyazdani42/nvim-web-devicons', -- optional, for file icon
       },
+      tag = 'nightly'-- opcional, actualizado cada semana.
     }
     use {"folke/todo-comments.nvim"}
     use {"terrortylor/nvim-comment"}
