@@ -1,18 +1,20 @@
--- Para mejora los tiempos de carga
-pcall(require, 'impatient')
+require("alejandro.plugins-setup")
 
--- Para que si al iniciar vim no esta instalado packer, se instale automaticamente.
-if require "script.first_load"() then
-  return
-end
-
--- Sane Settings
-require('settings')
--- Extra funcionality and plugins
-require('keymappings')
--- A lot of nice Plugins
-require('plugins')
--- Language Server Provider
-require('lsp')
-require('plugins.telescope.setup')
-require('plugins.telescope.mappings')
+require("alejandro.core.options")
+require("alejandro.core.keymaps")
+require("alejandro.core.colorscheme")
+require("alejandro.plugins.comment")
+require("alejandro.plugins.nvim-tree")
+require("alejandro.plugins.lualine")
+require("alejandro.plugins.nvim-cmp")
+require("alejandro.plugins.lsp.mason")
+require("alejandro.plugins.lsp.lspsaga")
+require("alejandro.plugins.lsp.lspconfig")
+require("alejandro.plugins.lsp.null-ls")
+require("alejandro.plugins.autopairs")
+require("alejandro.plugins.treesitter")
+require("alejandro.plugins.gitsigns")
+require("alejandro.plugins.bufferline")
+require("alejandro.plugins.hop")
+require("alejandro.plugins.todo")
+require("alejandro.plugins.telescope")
