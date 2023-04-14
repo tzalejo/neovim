@@ -14,9 +14,9 @@ nvimtree.setup({
 	sort_by = "Alejandro",
 	disable_netrw = false,
 	hijack_netrw = true,
-	open_on_setup = false,
-	ignore_buffer_on_setup = false,
-	ignore_ft_on_setup = {},
+	-- open_on_setup = false,
+	-- ignore_buffer_on_setup = false,
+	-- ignore_ft_on_setup = {},
 	auto_reload_on_write = true,
 	hijack_cursor = false,
 	update_cwd = false,
@@ -58,7 +58,8 @@ nvimtree.setup({
 	view = {
 		width = "20%",
 		-- height                      = '20%',
-		hide_root_folder = true, -- Para que no muestre la carpeta raiz.
+		-- hide_root_folder = true, -- Para que no muestre la carpeta raiz.
+		-- root_folder_label = false,
 		side = "left",
 		preserve_window_proportions = true,
 		mappings = {
