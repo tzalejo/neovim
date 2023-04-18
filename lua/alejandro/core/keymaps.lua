@@ -26,8 +26,8 @@ mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 mapper("n", "<Leader>s", ":so<CR>")
 
 -- Para desplazarno en una linea
-mapper("n", "<C-h>", "0")
-mapper("n", "<C-l>", "$")
+mapper("n", "<A-h>", "0")
+mapper("n", "<A-l>", "$")
 
 -- Save and Close
 mapper("n", "<Leader>w", ":w!<CR>")
