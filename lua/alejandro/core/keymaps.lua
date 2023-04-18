@@ -25,6 +25,10 @@ mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 -- Para recargar un archivo de forma manual
 mapper("n", "<Leader>s", ":so<CR>")
 
+-- Para desplazarno en una linea
+mapper("n", "<C-h>", "0")
+mapper("n", "<C-l>", "$")
+
 -- Save and Close
 mapper("n", "<Leader>w", ":w!<CR>")
 mapper("n", "<Leader>q", ":q<CR>")
