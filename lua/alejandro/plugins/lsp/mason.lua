@@ -42,7 +42,7 @@ mason_lspconfig.setup({
 		-- php
 		"intelephense",
 		"phpactor",
-		"psalm",
+		-- "psalm",
 
 		-- javascript
 		"quick_lint_js",

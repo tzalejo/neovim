@@ -9,6 +9,12 @@ if not actions_status then
 end
 
 telescope.setup({
+	pickers = {
+		find_files = {
+			no_ignore = { ".log" },
+		},
+	},
+
 	-- configure custom mappings
 	defaults = {
 		file_ignore_patterns = {
