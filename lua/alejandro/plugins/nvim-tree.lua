@@ -74,6 +74,20 @@ nvimtree.setup({
 		cmd = "trash",
 		require_confirm = true,
 	},
+	log = {
+		enable = true,
+		truncate = false,
+		types = {
+			all = false,
+			config = false,
+			copy_paste = false,
+			dev = false,
+			diagnostics = false,
+			git = false,
+			profile = false,
+			watcher = false,
+		},
+	},
 	actions = {
 		change_dir = {
 			enable = true,
