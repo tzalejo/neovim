@@ -19,7 +19,7 @@ vim.opt.rtp:prepend(lazypath)
 
 require('lazy').setup('plugins')
 
-require("core.options")
-require("core.keymaps")
-require("core.colorscheme")
+require("alejandro.core.options")
+require("alejandro.core.keymaps")
+require("alejandro.core.colorscheme")
 
