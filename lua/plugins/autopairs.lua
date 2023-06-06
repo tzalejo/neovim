@@ -1,5 +1,3 @@
-
-    
 -- -- import nvim-autopairs completion functionality safely
 -- local cmp_autopairs_setup, cmp_autopairs = pcall(require, "nvim-autopairs.completion.cmp")
 -- if not cmp_autopairs_setup then
@@ -19,7 +17,7 @@
 return {
     "windwp/nvim-autopairs",
     config = function() 
-        require("nvim-autopairs").setup {            
+        require("nvim-autopairs").setup {
             check_ts = true, --enable tresitter
             ts_config = {
                 lua = { "string" }, --dont add pairs in lua string treesitter nodes
@@ -31,4 +29,4 @@ return {
 
 } -- autoclose parens, brackets, quotes, etc...
 
-		
+

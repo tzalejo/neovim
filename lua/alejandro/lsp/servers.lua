@@ -22,12 +22,12 @@ return {
       filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "blade", "vue" },
     }
   end,
-  ["gopls"] = function()
+  --[[ ["gopls"] = function()
     return {
       on_attach = lsp_attach,
       flags = lsp_flags,
     }
-  end,
+  end, ]]
   ["html"] = default,
   ["jsonls"] = default,
   ["lua_ls"] = function()
@@ -57,7 +57,7 @@ return {
     }
   end,
   ["marksman"] = default,
-  ["nil_ls"] = default,
+  -- ["nil_ls"] = default,
   ["phpactor"] = function()
     return {
       on_attach = lsp_attach,

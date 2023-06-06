@@ -1,4 +1,4 @@
--- local telescope_mapper = require "alpha.telescope.mappings"
+local telescope_mapper = require "alejandro.telescope.mappings"
 
 local filetype_attach = setmetatable({}, {
   __index = function()
@@ -22,10 +22,10 @@ return function(client, bufnr)
     }
   end, { buffer = 0, desc = "LSP format file" })
 
-  -- telescope_mapper("gr", "lsp_references", { buffer = true, desc = "LSP References of symbol on cursor" })
-  -- telescope_mapper("<leader>pv", "find_symbol", { buffer = true, desc = "LSP find symbol on the project" })
-  -- telescope_mapper("<leader>pd", "lsp_document_symbols", { buffer = true, desc = "LSP document symbols" })
-  -- telescope_mapper("<c-]>", "lsp_definitions", { buffer = true, desc = "LSP go to definition" })
+  telescope_mapper("gr", "lsp_references", { buffer = true, desc = "LSP References of symbol on cursor" })
+  telescope_mapper("<leader>pv", "find_symbol", { buffer = true, desc = "LSP find symbol on the project" })
+  telescope_mapper("<leader>pd", "lsp_document_symbols", { buffer = true, desc = "LSP document symbols" })
+  telescope_mapper("<c-]>", "lsp_definitions", { buffer = true, desc = "LSP go to definition" })
 
   vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
 

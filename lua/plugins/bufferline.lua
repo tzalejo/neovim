@@ -11,7 +11,7 @@ return {
     dependencies = 'nvim-tree/nvim-web-devicons',
     opts = {
         options = {
-        	numbers = "none",            
+        	numbers = "none",
             hover = {
     			enable = true,
     			delay = 2000,
