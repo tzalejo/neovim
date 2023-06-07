@@ -7,7 +7,7 @@ local filetype_attach = setmetatable({}, {
 })
 return function(client, bufnr)
   local filetype = vim.api.nvim_buf_get_option(0, "filetype")
-  -- keymaps for lsp
+  -- INFO: keymaps for lsp
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0, desc = "LSP Help information of symbol under the cursor" })
   vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, { buffer = 0, desc = "LSP Rename symbol under cursor" })
   vim.keymap.set("i", "<leader>he", vim.lsp.buf.signature_help, { buffer = 0, desc = "LSP Signature help" })

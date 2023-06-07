@@ -8,7 +8,7 @@ null_ls.setup({
 		null_ls.builtins.formatting.jq,
 		null_ls.builtins.code_actions.refactoring,
 		null_ls.builtins.formatting.alejandra,
-		null_ls.builtins.diagnostics.luacheck,
+		-- null_ls.builtins.diagnostics.luacheck,
 		null_ls.builtins.formatting.stylua,
 
 		-- php_actions.getter_setter,
@@ -33,7 +33,7 @@ null_ls.setup({
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>vca", vim.lsp.buf.code_action, { desc = "LSP (null ls) Code actions" })
--- INFO: para formatear el codigo
+-- INFO: keymap para formatear el codigo
 vim.keymap.set("n", "<leader>vf", function()
 	return vim.lsp.buf.format({ async = true })
 end, { desc = "LSP (null ls) Format file" })
