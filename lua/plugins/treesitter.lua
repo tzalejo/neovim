@@ -1,7 +1,7 @@
-	-- treesitter configuration
-return	{
+-- treesitter configuration
+return {
 	"nvim-treesitter/nvim-treesitter",
-	build = function()	
+	build = function()
 		require("nvim-treesitter.install").update({ with_sync = true })
 	end,
 	dependencies = {
@@ -12,7 +12,7 @@ return	{
 	},
 	config = function()
 		-- configure treesitter
-		require('nvim-treesitter.configs').setup{
+		require("nvim-treesitter.configs").setup({
 			-- enable syntax highlighting
 			highlight = {
 				enable = true,
@@ -46,8 +46,6 @@ return	{
 			},
 			-- auto install above language parsers
 			auto_install = true,
-
-		}
-
-	end
+		})
+	end,
 }

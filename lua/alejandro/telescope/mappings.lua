@@ -1,37 +1,37 @@
 local map_tele = function(key, f, opts)
-  local default = {
-    mode = "n",
-    options = {},
-    buffer = nil,
-    desc = nil,
-  }
-  opts = opts or {}
-  opts = vim.tbl_deep_extend("force", default, opts or {})
+	local default = {
+		mode = "n",
+		options = {},
+		buffer = nil,
+		desc = nil,
+	}
+	opts = opts or {}
+	opts = vim.tbl_deep_extend("force", default, opts or {})
 
-  local rhs = function()
-    R("alejandro.telescope")[f](opts.options)
-  end
+	local rhs = function()
+		R("alejandro.telescope")[f](opts.options)
+	end
 
-  local map_options = {
-    remap = false,
-    silent = true,
-  }
-  if opts.buffer then
-    map_options.buffer = opts.buffer
-  end
-  if opts.desc then
-    map_options.desc = "Telescope: " .. opts.desc
-  end
+	local map_options = {
+		remap = false,
+		silent = true,
+	}
+	if opts.buffer then
+		map_options.buffer = opts.buffer
+	end
+	if opts.desc then
+		map_options.desc = "Telescope: " .. opts.desc
+	end
 
-  vim.keymap.set(opts.mode, key, rhs, map_options)
+	vim.keymap.set(opts.mode, key, rhs, map_options)
 end
 
 -- not shure what this line does
 vim.api.nvim_set_keymap(
-  "c",
-  "<c-r><c-r>",
-  "<Plug>(TelescopeFuzzyCommandSearch)",
-  { noremap = false, nowait = true, desc = "In comand look for previous commands" }
+	"c",
+	"<c-r><c-r>",
+	"<Plug>(TelescopeFuzzyCommandSearch)",
+	{ noremap = false, nowait = true, desc = "In comand look for previous commands" }
 )
 
 map_tele("<leader>pp", "project_files", { desc = "Open Project files" })

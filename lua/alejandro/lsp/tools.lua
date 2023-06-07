@@ -1,6 +1,6 @@
 return {
-    "go-debug-adapter",
-    "php-debug-adapter",
-    "js-debug-adapter",
-    "codelldb",
+	"go-debug-adapter",
+	"php-debug-adapter",
+	"js-debug-adapter",
+	"codelldb",
 }
