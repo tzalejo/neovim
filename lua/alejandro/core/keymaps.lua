@@ -8,8 +8,13 @@ local mapper = function(mode, key, result)
 end
 
 ---------------------
--- INFO: General Keymaps
+-- TODO: General Keymaps
 ---------------------
+
+-- quick env file edit
+mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split" 
+
+mapper("t", "<Esc><Esc>", "<C-\\><C-n>")
 
 mapper("i", "jj", "<ESC>")
 

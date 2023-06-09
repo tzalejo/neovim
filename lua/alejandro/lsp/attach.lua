@@ -7,7 +7,7 @@ local filetype_attach = setmetatable({}, {
 })
 return function(client, bufnr)
   local filetype = vim.api.nvim_buf_get_option(0, "filetype")
-  -- INFO: keymaps for lsp
+  -- TODO: keymaps for lsp
   vim.keymap.set("n", "K", vim.lsp.buf.hover, { buffer = 0, desc = "LSP Help information of symbol under the cursor" })
   vim.keymap.set("n", "<leader>vrn", vim.lsp.buf.rename, { buffer = 0, desc = "LSP Rename symbol under cursor" })
   vim.keymap.set("i", "<leader>he", vim.lsp.buf.signature_help, { buffer = 0, desc = "LSP Signature help" })
@@ -22,10 +22,10 @@ return function(client, bufnr)
     }
   end, { buffer = 0, desc = "LSP format file" })
 
-  telescope_mapper("gr", "lsp_references", { buffer = true, desc = "LSP References of symbol on cursor" })
+  telescope_mapper("gr", "lsp_references", { buffer = true, desc = "LSP References of symbol on cursor" }) -- INFO: ir a la referencia 
   telescope_mapper("<leader>pv", "find_symbol", { buffer = true, desc = "LSP find symbol on the project" })
-  telescope_mapper("<leader>pd", "lsp_document_symbols", { buffer = true, desc = "LSP document symbols" })
-  telescope_mapper("gi", "lsp_definitions", { buffer = true, desc = "LSP go to definition" })
+  telescope_mapper("<leader>pd", "lsp_document_symbols", { buffer = true, desc = "LSP document symbols" })  -- INFO: nombre d funciones en el doc 
+  telescope_mapper("gi", "lsp_definitions", { buffer = true, desc = "LSP go to definition" })  -- INFO: ir a la definicion 
 
   vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
 

@@ -33,7 +33,7 @@ vim.api.nvim_set_keymap(
 	"<Plug>(TelescopeFuzzyCommandSearch)",
 	{ noremap = false, nowait = true, desc = "In comand look for previous commands" }
 )
--- INFO: keymap
+-- TODO: keymap
 map_tele("<leader>pp", "project_files", { desc = "Open Project files" })
 map_tele("<leader>gc", "branches", { desc = "Git Branches selector" })
 map_tele("<leader>pw", "grep_word", { desc = "Grep word under cursor" })

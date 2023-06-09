@@ -1,6 +1,5 @@
 return {
 	-- Para resaltar y buscar comentarios de tareas pendientes como TODO:, en su base HACKde BUGcódigo.
-	-- FIX: otro error de prueba
 	"folke/todo-comments.nvim",
 	dependencies = { "nvim-lua/plenary.nvim" },
 	opts = {

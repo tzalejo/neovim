@@ -33,7 +33,7 @@ null_ls.setup({
 })
 
 vim.keymap.set({ "n", "v" }, "<leader>vca", vim.lsp.buf.code_action, { desc = "LSP (null ls) Code actions" })
--- INFO: keymap para formatear el codigo
+-- TODO: keymap 
 vim.keymap.set("n", "<leader>vf", function()
-	return vim.lsp.buf.format({ async = true })
+	return vim.lsp.buf.format({ async = true }) -- INFO: para formatear el codigo
 end, { desc = "LSP (null ls) Format file" })

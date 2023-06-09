@@ -52,7 +52,7 @@ require("telescope").setup({
 		sorting_strategy = "descending",
 		scroll_strategy = "cycle",
 		color_devicons = true,
-        -- INFO: keymaps
+        -- TODO: keymaps
 		mappings = {
 			i = {
 				-- ["<C-x>"] = false,
