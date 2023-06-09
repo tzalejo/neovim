@@ -8,7 +8,7 @@ local mapper = function(mode, key, result)
 end
 
 ---------------------
--- General Keymaps
+-- INFO: General Keymaps
 ---------------------
 
 mapper("i", "jj", "<ESC>")
