@@ -13,6 +13,7 @@ end
 
 -- quick env file edit
 mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split" 
+mapper("n", "<leader>dc", ":vsp docker-compose.yml<CR>") -- "Open docker-compose file in a vertical split" 
 
 mapper("t", "<Esc><Esc>", "<C-\\><C-n>")
 
@@ -76,8 +77,8 @@ mapper("n", "<Leader>vi", ":vsplit<CR>") -- ventana izquierda
 mapper("n", "<C-w>", ":Bdelete<CR>")
 
 -- telescope
-mapper("n", "<Leader>fs", "<cmd>Telescope find_files<cr>")
-mapper("n", "<Leader>ft", "<cmd>Telescope live_grep<cr>")
-mapper("n", "<Leader>fh", "<cmd>Telescope help_tags<cr>")
-mapper("n", "<Leader>gst", "<cmd>Telescope git_status<cr>") -- Para ver status de cada archivo..
-mapper("n", "<Leader>gcm", "<cmd>Telescope git_commits<cr>") -- Muestra el listado de commits hechos..
+-- mapper("n", "<Leader>fs", "<cmd>Telescope find_files<cr>")
+-- mapper("n", "<Leader>ft", "<cmd>Telescope live_grep<cr>")
+-- mapper("n", "<Leader>fh", "<cmd>Telescope help_tags<cr>")
+-- mapper("n", "<Leader>gst", "<cmd>Telescope git_status<cr>") -- Para ver status de cada archivo..
+-- mapper("n", "<Leader>gcm", "<cmd>Telescope git_commits<cr>") -- Muestra el listado de commits hechos..

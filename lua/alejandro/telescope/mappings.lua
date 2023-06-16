@@ -52,4 +52,10 @@ map_tele("<leader>ve", "diagnostics", { desc = "Diagnostic of the buffer" })
 map_tele("<leader>po", "api_specs", { desc = "Openapi directory" })
 map_tele("<leader>pm", "gateway", { desc = "Graphql mutations and queries" })
 
+map_tele("<Leader>fs", "find_files", { no_ignore_parent=true, no_ignore=true})
+map_tele("<Leader>ft", "live_grep", {desc = ""})
+map_tele("<Leader>fh", "help_tags", {desc = ""})
+map_tele("<Leader>gst", "git_status", {desc= ""}) -- Para ver status de cada archivo..
+map_tele("<Leader>gcm", "git_commits", {desc = ""}) -- Muestra el listado de commits hechos..
+
 return map_tele
