@@ -23,7 +23,7 @@ return function(client, bufnr)
   end, { buffer = 0, desc = "LSP format file" })
 
   telescope_mapper("gr", "lsp_references", { buffer = true, desc = "LSP References of symbol on cursor" }) -- INFO: ir a la referencia 
-  telescope_mapper("<leader>pv", "find_symbol", { buffer = true, desc = "LSP find symbol on the project" })
+  telescope_mapper("<leader>pv", "find_symbol", { buffer = true, desc = "LSP find symbol on the project" }) -- INFO: ver funciones y variables del file
   telescope_mapper("<leader>pd", "lsp_document_symbols", { buffer = true, desc = "LSP document symbols" })  -- INFO: nombre d funciones en el doc 
   telescope_mapper("gi", "lsp_definitions", { buffer = true, desc = "LSP go to definition" })  -- INFO: ir a la definicion 
 

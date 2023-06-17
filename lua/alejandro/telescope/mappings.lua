@@ -50,9 +50,9 @@ map_tele("<leader>bp", "file_browser", { desc = "Project directory" })
 
 map_tele("<leader>ve", "diagnostics", { desc = "Diagnostic of the buffer" })
 map_tele("<leader>po", "api_specs", { desc = "Openapi directory" })
-map_tele("<leader>pm", "gateway", { desc = "Graphql mutations and queries" })
+-- map_tele("<leader>pm", "gateway", { desc = "Graphql mutations and queries" })
 
-map_tele("<Leader>fs", "find_files", { no_ignore_parent=true, no_ignore=true})
+map_tele("<Leader>fs", "find_files", { opts = { no_ignore_parent = false, no_ignore = false}})
 map_tele("<Leader>ft", "live_grep", {desc = ""})
 
 map_tele("<Leader>gst", "git_status", {desc= "Git status"}) -- Para ver status de cada archivo..
