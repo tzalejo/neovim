@@ -8,7 +8,6 @@ vim.api.nvim_create_autocmd("User", {
 		-- require "config.usercmds"
 		require("config.keymaps")
 		require("config.globals")
-		require("config.colorscheme")
 		-- require "config.diagnostic"
 	end,
 })
