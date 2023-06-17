@@ -1,10 +1,8 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
 
 -- Install package manager
 --    https://github.com/folke/lazy.nvim
 --    `:help lazy.nvim.txt` for more info
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+--[[ local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
 	vim.fn.system({
 		"git",
@@ -15,11 +13,8 @@ if not vim.loop.fs_stat(lazypath) then
 		lazypath,
 	})
 end
-vim.opt.rtp:prepend(lazypath)
+vim.opt.rtp:prepend(lazypath) ]]
+require "config"
 
-require("lazy").setup("plugins")
+-- require("lazy").setup("plugins")
 
-require("alejandro.core.globals")
-require("alejandro.core.options")
-require("alejandro.core.keymaps")
-require("alejandro.core.colorscheme")

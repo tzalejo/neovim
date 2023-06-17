@@ -12,8 +12,8 @@ end
 ---------------------
 
 -- quick env file edit
-mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split" 
-mapper("n", "<leader>dc", ":vsp docker-compose.yml<CR>") -- "Open docker-compose file in a vertical split" 
+mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split"
+mapper("n", "<leader>dc", ":vsp docker-compose.yml<CR>") -- "Open docker-compose file in a vertical split"
 
 mapper("t", "<Esc><Esc>", "<C-\\><C-n>")
 
@@ -75,5 +75,3 @@ mapper("n", "<Leader>vi", ":vsplit<CR>") -- ventana izquierda
 
 -- Cerrar una buffer
 mapper("n", "<C-w>", ":Bdelete<CR>")
-
-
