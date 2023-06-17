@@ -68,4 +68,7 @@ return {
 
 	-- Permite eliminar búferes {cerrar archivos) sin cerrar sus ventanas o estropear su diseño.
 	{ "moll/vim-bbye" },
+
+    -- Permite seleccion rapida 
+    { 'mg979/vim-visual-multi', branch = 'master'}
 }
