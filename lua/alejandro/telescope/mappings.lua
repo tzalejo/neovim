@@ -37,7 +37,7 @@ vim.api.nvim_set_keymap(
 map_tele("<leader>pp", "project_files", { desc = "Open Project files" })
 map_tele("<leader>gc", "branches", { desc = "Git Branches selector" })
 map_tele("<leader>pw", "grep_word", { desc = "Grep word under cursor" })
--- map_tele("<leader>ps", "grep_string", { desc = "Grep provided input string" })
+map_tele("<leader>ps", "grep_string", { desc = "Grep provided input string" })
 -- map_tele("<leader>rc", "search_config", { desc = "Search Files in .dotfiles directory" })
 map_tele("<leader>rn", "find_nvim_config", { desc = "Search Files in nvim config directory" })
 map_tele("<leader>rp", "find_nvim_plugin", { desc = "Search Neovim plugins" })
@@ -47,15 +47,15 @@ map_tele("<leader>pe", "buffers", { desc = "Open buffers" })
 map_tele("<leader>pr", "treesitter", { desc = "Treesitter buffer elements" })
 map_tele("<leader>bb", "file_browser_relative", { desc = "Current directory" })
 map_tele("<leader>bp", "file_browser", { desc = "Project directory" })
--- map_tele("<leader>gs", "git_status", { desc = "Git status" })
+
 map_tele("<leader>ve", "diagnostics", { desc = "Diagnostic of the buffer" })
 map_tele("<leader>po", "api_specs", { desc = "Openapi directory" })
 map_tele("<leader>pm", "gateway", { desc = "Graphql mutations and queries" })
 
 map_tele("<Leader>fs", "find_files", { no_ignore_parent=true, no_ignore=true})
 map_tele("<Leader>ft", "live_grep", {desc = ""})
-map_tele("<Leader>fh", "help_tags", {desc = ""})
-map_tele("<Leader>gst", "git_status", {desc= ""}) -- Para ver status de cada archivo..
+
+map_tele("<Leader>gst", "git_status", {desc= "Git status"}) -- Para ver status de cada archivo..
 map_tele("<Leader>gcm", "git_commits", {desc = ""}) -- Muestra el listado de commits hechos..
 
 return map_tele
