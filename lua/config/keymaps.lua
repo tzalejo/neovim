@@ -11,6 +11,10 @@ end
 -- TODO: General Keymaps
 ---------------------
 
+--ver diagnotico de la configuracion
+mapper("n", "<leader>he", ":checkhealth<CR>") -- "Open .env file in a vertical split"
+
+
 -- quick env file edit
 mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split"
 mapper("n", "<leader>dc", ":vsp docker-compose.yml<CR>") -- "Open docker-compose file in a vertical split"
