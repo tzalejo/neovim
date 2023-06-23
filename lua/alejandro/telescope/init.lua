@@ -147,7 +147,7 @@ end
 function M.file_browser_relative()
 	return M.file_browser({ path = "%:p:h" })
 end
---[[
+
 function M.gateway()
   return require("alpha.php.gateway").graphql_definitions {
     layout_config = {
@@ -158,7 +158,7 @@ function M.gateway()
       },
     },
   }
-end ]]
+end
 
 function M.file_browser(opts)
 	opts = opts or {}
