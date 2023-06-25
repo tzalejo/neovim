@@ -1,27 +1,33 @@
 -- treesitter configuration
 return {
-	"nvim-treesitter/nvim-treesitter",
-	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag", -- autoclose tags
-		"nvim-treesitter/playground",
-		"nvim-treesitter/nvim-treesitter-refactor",
-		"nvim-treesitter/nvim-treesitter-textobjects",
-	},
-	config = function()
-		-- configure treesitter
-		require("nvim-treesitter.configs").setup({
-			-- enable syntax highlighting
-			highlight = {
-				enable = true,
-				additional_vim_regex_highlighting = { "org" },
-			},
-			-- enable indentation
-			indent = { enable = true },
-			-- enable autotagging (w/ nvim-ts-autotag plugin)
-			autotag = { enable = true },
-			-- ensure these language parsers are installed
-			ensure_installed = {
+	{
+		"nvim-treesitter/nvim-treesitter",
+		build = ":TSUpdate",
+		keys = { { "<Space>", mode = { "n", "x" } }, { "<C-Space>", mode = "x" }, { "<BS>", mode = "x" } },
+		cmd = {
+			"TSBufDisable",
+			"TSBufEnable",
+			"TSBufToggle",
+			"TSConfigInfo",
+			"TSDisable",
+			"TSEditQuery",
+			"TSEditQueryUserAfter",
+			"TSEnable",
+			"TSInstall",
+			"TSInstallFromGrammar",
+			"TSInstallInfo",
+			"TSInstallSync",
+			"TSModuleInfo",
+			"TSToggle",
+			"TSUninstall",
+			"TSUpdate",
+			"TSUpdateSync",
+		},
+		event = "FileType",
+		opts = function(_, opts)
+			local highlight_disable = {}
+
+			opts.ensure_installed = {
 				"json",
 				"bash",
 				"javascript",
@@ -44,57 +50,189 @@ return {
 				"vim",
 				"sql",
 				"query",
-			},
-			incremental_selection = {
+			}
+			opts.sync_install = true
+			opts.auto_install = true
+			opts.highlight = {
+				enable = true,
+				disable = function(_, buf)
+					if highlight_disable[buf] then
+						return highlight_disable[buf]
+					end
+
+					local stats = vim.loop.fs_stat(vim.api.nvim_buf_get_name(buf))
+
+					if stats and stats.size > 102400 then
+						highlight_disable[buf] = true
+
+						return highlight_disable[buf]
+					end
+				end,
+				additional_vim_regex_highlighting = false,
+			}
+			opts.indent = { enable = true }
+			opts.incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = "gnn",
-					node_incremental = "grn",
-					scope_incremental = "grc",
-					node_decremental = "grm",
+					init_selection = "<Space>",
+					node_incremental = "<Space>",
+					scope_incremental = "<C-Space>",
+					node_decremental = "<BS>",
 				},
+			}
+		end,
+		config = function(_, opts)
+			require("nvim-treesitter.configs").setup(opts)
+		end,
+	},
+	{
+		"nvim-treesitter/nvim-treesitter-textobjects",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			opts = function(_, opts)
+				opts.textobjects = {
+					select = { lookahead = true },
+					lsp_interop = { border = require("alejandro.config-treesitter").border and "rounded" or "shadow" },
+				}
+			end,
+		},
+		keys = {
+			{
+				"af",
+				function()
+					require("nvim-treesitter.textobjects.select").select_textobject("@function.outer")
+				end,
+				mode = "x",
 			},
-			refactor = {
-				highlight_definitions = { enable = true },
-				smart_rename = {
-					enable = false,
-					keymaps = {
-						smart_rename = "trr",
-					},
-				},
+			{
+				"if",
+				function()
+					require("nvim-treesitter.textobjects.select").select_textobject("@function.inner")
+				end,
+				mode = "x",
 			},
-			textobjects = {
-				select = {
+			{
+				"ac",
+				function()
+					require("nvim-treesitter.textobjects.select").select_textobject("@conditional.outer")
+				end,
+				mode = "x",
+			},
+			{
+				"ic",
+				function()
+					require("nvim-treesitter.textobjects.select").select_textobject("@conditional.inner")
+				end,
+				mode = "x",
+			},
+			{
+				"al",
+				function()
+					require("nvim-treesitter.textobjects.select").select_textobject("@loop.outer")
+				end,
+				mode = "x",
+			},
+			{
+				"il",
+				function()
+					require("nvim-treesitter.textobjects.select").select_textobject("@loop.inner")
+				end,
+				mode = "x",
+			},
+			-- { "<Tab>", function() require("nvim-treesitter.textobjects.swap").swap_next("@parameter.inner") end },
+			-- { "<S-Tab>", function() require("nvim-treesitter.textobjects.swap").swap_previous("@parameter.inner") end },
+			{
+				"gD",
+				function()
+					require("nvim-treesitter.textobjects.lsp_interop").peek_definition_code("@*.*")
+				end,
+			},
+		},
+		cmd = {
+			"TSTextobjectBuiltinf",
+			"TSTextobjectBuiltinF",
+			"TSTextobjectBuiltint",
+			"TSTextobjectBuiltinT",
+			"TSTextobjectGotoNextEnd",
+			"TSTextobjectGotoNextStart",
+			"TSTextobjectGotoPreviousEnd",
+			"TSTextobjectGotoPreviousStart",
+			"TSTextobjectPeekDefinitionCode",
+			"TSTextobjectRepeatLastMove",
+			"TSTextobjectRepeatLastMoveNext",
+			"TSTextobjectRepeatLastMoveOpposite",
+			"TSTextobjectRepeatLastMovePrevious",
+			"TSTextobjectSelect",
+			"TSTextobjectSwapNext",
+			"TSTextobjectSwapPrevious",
+		},
+	},
+	{
+		"HiPhish/nvim-ts-rainbow2",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			opts = function(_, opts)
+				opts.rainbow = { enable = true }
+			end,
+		},
+		event = "FileType",
+	},
+	{
+		"windwp/nvim-ts-autotag",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+			opts = function(_, opts)
+				opts.autotag = {
 					enable = true,
-					lookahead = true,
-					keymaps = {
-						["af"] = "@function.outer",
-						["if"] = "@function.inner",
-						["ac"] = "@conditional.outer",
-						["ic"] = "@conditional.inner",
-						["al"] = "@loop.outer",
-						["il"] = "@loop.inner",
+					filetypes = {
+						"html",
+						"javascript",
+						"javascriptreact",
+						"typescriptreact",
+						"markdown",
+						"php",
+						"svelte",
+						"vue",
+						"tsx",
+						"jsx",
+						"rescript",
 					},
-				},
-			},
-			playground = {
-				enable = true,
-				disable = {},
-				updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
-				persist_queries = false, -- Whether the query persists across vim sessions
-				keybindings = {
-					toggle_query_editor = "o",
-					toggle_hl_groups = "i",
-					toggle_injected_languages = "t",
-					toggle_anonymous_nodes = "a",
-					toggle_language_display = "I",
-					focus_language = "f",
-					unfocus_language = "F",
-					update = "R",
-					goto_node = "<cr>",
-					show_help = "?",
-				},
-			},
-		})
-	end,
+				}
+			end,
+		},
+		init = function()
+			vim.api.nvim_create_autocmd("FileType", {
+				pattern = "html,javascript,javascriptreact,typescriptreact,markdown",
+				group = vim.api.nvim_create_augroup("load_nvim_ts_autotag", { clear = false }),
+				callback = function(ev)
+					if package.loaded["nvim-ts-autotag"] then
+						vim.api.nvim_clear_autocmds({ group = ev.group })
+
+						return true
+					end
+
+					vim.api.nvim_create_autocmd("InsertEnter", {
+						buffer = ev.buf,
+						group = ev.group,
+						callback = function()
+							vim.api.nvim_clear_autocmds({ group = ev.group })
+
+							require("lazy").load({ plugins = { "nvim-ts-autotag" } })
+						end,
+					})
+				end,
+			})
+		end,
+		config = function()
+			vim.api.nvim_command("doautoall <nomodeline> FileType")
+		end,
+	},
+	{
+		"danymat/neogen",
+		dependencies = { "nvim-treesitter/nvim-treesitter", "L3MON4D3/LuaSnip" },
+		cmd = "Neogen",
+		config = function()
+			require("neogen").setup({ snippet_engine = "luasnip" })
+		end,
+	},
 }
