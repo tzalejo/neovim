@@ -149,7 +149,7 @@ function M.file_browser_relative()
 end
 
 function M.gateway()
-  return require("alpha.php.gateway").graphql_definitions {
+  return require("alejandro.php.gateway").graphql_definitions {
     layout_config = {
       horizontal = {
         preview_width = function(_, cols, _)
