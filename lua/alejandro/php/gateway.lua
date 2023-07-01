@@ -3,7 +3,7 @@ local finders = require "telescope.finders"
 local conf = require("telescope.config").values
 local action_state = require "telescope.actions.state"
 local action_set = require "telescope.actions.set"
-local actions = require "telescope.actions"
+local actions = require "alejandro.telescope.actions"
 local get_node_text = vim.treesitter.get_node_text
 
 local gateway = {}
