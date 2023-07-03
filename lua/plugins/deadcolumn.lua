@@ -1,5 +1,5 @@
 return {
-  "Bekaboo/deadcolumn.nvim",
-  enabled = false,
-  event = { "VeryLazy" },
+    "Bekaboo/deadcolumn.nvim",
+    enabled = false,
+    event = { "VeryLazy" },
 }

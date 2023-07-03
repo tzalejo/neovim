@@ -1,37 +1,37 @@
 local map_tele = function(key, f, opts)
-	local default = {
-		mode = "n",
-		options = {},
-		buffer = nil,
-		desc = nil,
-	}
-	opts = opts or {}
-	opts = vim.tbl_deep_extend("force", default, opts or {})
+    local default = {
+        mode = "n",
+        options = {},
+        buffer = nil,
+        desc = nil,
+    }
+    opts = opts or {}
+    opts = vim.tbl_deep_extend("force", default, opts or {})
 
-	local rhs = function()
-		R("alejandro.telescope")[f](opts.options)
-	end
+    local rhs = function()
+        R("alejandro.telescope")[f](opts.options)
+    end
 
-	local map_options = {
-		remap = false,
-		silent = true,
-	}
-	if opts.buffer then
-		map_options.buffer = opts.buffer
-	end
-	if opts.desc then
-		map_options.desc = "Telescope: " .. opts.desc
-	end
+    local map_options = {
+        remap = false,
+        silent = true,
+    }
+    if opts.buffer then
+        map_options.buffer = opts.buffer
+    end
+    if opts.desc then
+        map_options.desc = "Telescope: " .. opts.desc
+    end
 
-	vim.keymap.set(opts.mode, key, rhs, map_options)
+    vim.keymap.set(opts.mode, key, rhs, map_options)
 end
 
 -- not shure what this line does
 vim.api.nvim_set_keymap(
-	"c",
-	"<c-r><c-r>",
-	"<Plug>(TelescopeFuzzyCommandSearch)",
-	{ noremap = false, nowait = true, desc = "In comand look for previous commands" }
+    "c",
+    "<c-r><c-r>",
+    "<Plug>(TelescopeFuzzyCommandSearch)",
+    { noremap = false, nowait = true, desc = "In comand look for previous commands" }
 )
 -- TODO: keymap
 map_tele("<leader>pp", "project_files", { desc = "Open Project files" })
@@ -52,10 +52,10 @@ map_tele("<leader>ve", "diagnostics", { desc = "Diagnostic of the buffer" })
 map_tele("<leader>po", "api_specs", { desc = "Openapi directory" })
 -- map_tele("<leader>pm", "gateway", { desc = "Graphql mutations and queries" })
 
-map_tele("<Leader>fs", "find_logs", { desc = ""})
-map_tele("<Leader>ft", "live_grep", { desc = "Find text"})
+map_tele("<Leader>fs", "find_logs", { desc = "" })
+map_tele("<Leader>ft", "live_grep", { desc = "Find text" })
 
-map_tele("<Leader>gst", "git_status", { desc= "Git status"}) -- Para ver status de cada archivo..
-map_tele("<Leader>gcm", "git_commits", { desc = ""}) -- Muestra el listado de commits hechos..
+map_tele("<Leader>gst", "git_status", { desc = "Git status" }) -- Para ver status de cada archivo..
+map_tele("<Leader>gcm", "git_commits", { desc = "" }) -- Muestra el listado de commits hechos..
 
 return map_tele

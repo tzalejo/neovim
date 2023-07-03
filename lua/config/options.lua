@@ -35,24 +35,24 @@ opt.signcolumn = "yes" -- show sign column so that text doesn't shift
 opt.backspace = "indent,eol,start" -- allow backspace on indent, end of line or insert mode start position
 
 -- clipboard
-opt.clipboard:append("unnamedplus") -- use system clipboard as default register
+opt.clipboard:append "unnamedplus" -- use system clipboard as default register
 
 -- split windows
 opt.splitright = true -- split vertical window to the right
 opt.splitbelow = true -- split horizontal window to the bottom
 
-opt.iskeyword:append("-") -- consider string-string as whole word
+opt.iskeyword:append "-" -- consider string-string as whole word
 
 -- movimiento de linea
-vim.cmd([[
+vim.cmd [[
 filetype plugin indent on
 nnoremap <silent> <A-j>  :<C-U>exec "exec 'norm m`' \| move +" . (0+v:count1)<CR>
 nnoremap <silent> <A-k>  :<C-U>exec "exec 'norm m`' \| move -" . (1+v:count1)<CR>
-]])
+]]
 
 -- cuando navego centro la pantalla
-vim.cmd([[
+vim.cmd [[
 nnoremap n nzzzv
 nnoremap N Nzzzv
 nnoremap J mzJ`z
-]])
+]]

@@ -27,7 +27,7 @@ vim.keymap.set("n", "<leader>tk", function()
             return vim.ui.input({
                 prompt = "New Class",
             }, function(value)
-                require("phpactor").rpc("new_class", { current_path = vim.fn.getcwd() ..  "/app/" .. value ..".php"})
+                require("phpactor").rpc("new_class", { current_path = vim.fn.getcwd() .. "/app/" .. value .. ".php" })
             end)
         end
 

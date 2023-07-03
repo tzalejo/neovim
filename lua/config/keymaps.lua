@@ -4,7 +4,7 @@ local keymap = vim.keymap --for consisenes
 
 -- Mapping helper
 local mapper = function(mode, key, result)
-	vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
+    vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
 end
 
 ---------------------
@@ -13,7 +13,6 @@ end
 
 --ver diagnotico de la configuracion
 mapper("n", "<leader>he", ":checkhealth<CR>") -- "Open .env file in a vertical split"
-
 
 -- quick env file edit
 mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split"
