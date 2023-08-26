@@ -43,7 +43,7 @@ require("telescope").setup {
 
             flex = {
                 horizontal = {
-                    preview_width = 0.9,
+                    preview_width = 1,
                 },
             },
         },

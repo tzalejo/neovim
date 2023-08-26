@@ -25,7 +25,9 @@ return {
             },
         },
     },
+    event = 'VeryLazy',
     config = function()
+        require "alejandro.telescope.setup"
         require "alejandro.telescope.mappings"
     end,
 }
