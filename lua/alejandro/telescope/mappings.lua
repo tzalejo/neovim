@@ -34,7 +34,7 @@ vim.api.nvim_set_keymap(
     { noremap = false, nowait = true, desc = "In comand look for previous commands" }
 )
 -- TODO: keymap
-map_tele("<leader>pp", "project_files", { desc = "Open Project files" })
+map_tele("<leader>fs", "project_files", { desc = "Open Project files" })
 map_tele("<leader>gc", "branches", { desc = "Git Branches selector" })
 map_tele("<leader>pw", "grep_word", { desc = "Grep word under cursor" })
 map_tele("<leader>ps", "grep_string", { desc = "Grep provided input string" })
@@ -52,7 +52,7 @@ map_tele("<leader>ve", "diagnostics", { desc = "Diagnostic of the buffer" })
 map_tele("<leader>po", "api_specs", { desc = "Openapi directory" })
 -- map_tele("<leader>pm", "gateway", { desc = "Graphql mutations and queries" })
 
-map_tele("<Leader>fs", "find_logs", { desc = "" })
+-- map_tele("<Leader>fs", "find_files", { desc = "Find Logs", no_ignore=true, search_dirs="./storage/logs" })
 map_tele("<Leader>ft", "live_grep", { desc = "Find text" })
 
 map_tele("<Leader>gst", "git_status", { desc = "Git status" }) -- Para ver status de cada archivo..

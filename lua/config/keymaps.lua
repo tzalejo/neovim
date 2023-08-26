@@ -11,6 +11,9 @@ end
 -- TODO: General Keymaps
 ---------------------
 
+-- ver todo los archivos en la carpeta logs
+mapper("n", "<Leader>log", ":Telescope find_files search_dirs={'./storage/logs'} no_ignore=true<CR>")
+
 --ver diagnotico de la configuracion
 mapper("n", "<leader>he", ":checkhealth<CR>") -- "Open .env file in a vertical split"
 

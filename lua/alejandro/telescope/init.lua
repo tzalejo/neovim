@@ -47,13 +47,6 @@ M.find_nvim_config = function()
     }
 end
 
-M.find_logs = function()
-    require("telescope.builtin").find_files {
-        -- search_dirs='storage/',
-        no_ignore = true,
-    }
-end
-
 M.find_nvim_plugin = function()
     require("telescope.builtin").find_files {
         prompt_title = "< Plugins >",
