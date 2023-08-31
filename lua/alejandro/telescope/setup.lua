@@ -57,13 +57,19 @@ require("telescope").setup {
             i = {
                 -- ["<C-x>"] = false,
                 -- ["<C-s>"] = actions.select_horizontal,
-                ["<C-n>"] = "move_selection_next",
+                ["<C-n>"] = "move_selection_next", -- abajo
+                ["<C-b>"] = "move_selection_previous", -- arriba
+                ["<C-i>"] = "move_to_bottom", -- se desplaza al inicio de la lista
+                ["<C-u>"] = "preview_scrolling_up", -- se desplaza el preview hacia arriba
+                ["<C-j>"] = "preview_scrolling_down", -- se desplaza el preview hacia abajo
+                ["<C-h>"] = "preview_scrolling_left", -- se desplaza el preview hacia izq
+                ["<C-k>"] = "preview_scrolling_right", -- se desplaza el preview hacia der
 
                 ["<C-y>"] = set_prompt_to_entry_value,
 
                 -- These are new :)
-                ["<M-p>"] = action_layout.toggle_preview,
-                ["<M-m>"] = action_layout.toggle_mirror,
+                -- ["<M-p>"] = action_layout.toggle_preview,
+                -- ["<M-m>"] = action_layout.toggle_mirror,
                 -- ["<M-p>"] = action_layout.toggle_prompt_position,
 
                 -- ["<M-m>"] = actions.master_stack,
@@ -72,8 +78,8 @@ require("telescope").setup {
                 -- ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
                 -- This is nicer when used with smart-history plugin.
-                ["<C-k>"] = actions.cycle_history_next,
-                ["<C-j>"] = actions.cycle_history_prev,
+                -- ["<C-k>"] = actions.cycle_history_next,
+                -- ["<C-j>"] = actions.cycle_history_prev,
 
                 -- ["<c-space>"] = function(prompt_bufnr)
                 -- 	local opts = {
