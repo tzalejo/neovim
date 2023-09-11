@@ -23,7 +23,7 @@ return {
             "TSUpdate",
             "TSUpdateSync",
         },
-        event = "FileType",
+        event = "VeryLazy",
         opts = function(_, opts)
             local highlight_disable = {}
 
@@ -42,6 +42,7 @@ return {
                 "graphql",
                 "bash",
                 "lua",
+                "luadoc",
                 "vim",
                 "dockerfile",
                 "gitignore",
