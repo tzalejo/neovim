@@ -35,5 +35,8 @@ return function(client, bufnr)
     vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
 
     -- Attach any filetype specific options to the client
-    filetype_attach[filetype](client, bufnr)
+    -- filetype_attach[filetype](client, bufnr)
+    if client.server_capabilities.inlayHintProvider then
+        vim.lsp.inlay_hint(bufnr, true)
+    end
 end

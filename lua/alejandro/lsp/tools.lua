@@ -3,4 +3,6 @@ return {
     "php-debug-adapter",
     "js-debug-adapter",
     "codelldb",
+    "phpcs",
+    "phpstan",
 }
