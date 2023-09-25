@@ -6,7 +6,6 @@ return {
     },
     config = function()
         require("nvim-tree").setup {
-            sort_by = "Alejandro",
             disable_netrw = false,
             hijack_netrw = true,
             -- open_on_setup = false,
