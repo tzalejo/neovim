@@ -1,6 +1,6 @@
-local actions = require "telescope.actions"
+-- local actions = require "telescope.actions"
+-- local action_layout = require "telescope.actions.layout"
 local action_state = require "telescope.actions.state"
-local action_layout = require "telescope.actions.layout"
 
 local set_prompt_to_entry_value = function(prompt_bufnr)
     local entry = action_state.get_selected_entry()
