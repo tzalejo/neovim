@@ -2,9 +2,9 @@ SHOULD_RELOAD_TELESCOPE = true
 
 local reloader = function()
     if SHOULD_RELOAD_TELESCOPE then
-        Reload "plenary"
-        Reload "telescope"
-        Reload "alejandro.telescope.setup"
+        RELOAD "plenary"
+        RELOAD "telescope"
+        RELOAD "alejandro.telescope.setup"
     end
 end
 
