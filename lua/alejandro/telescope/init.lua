@@ -2,9 +2,9 @@ SHOULD_RELOAD_TELESCOPE = true
 
 local reloader = function()
     if SHOULD_RELOAD_TELESCOPE then
-        RELOAD "plenary"
-        RELOAD "telescope"
-        RELOAD "alejandro.telescope.setup"
+        Reload "plenary"
+        Reload "telescope"
+        Reload "alejandro.telescope.setup"
     end
 end
 
@@ -137,10 +137,6 @@ function M.refactor()
     return require("telescope").extensions.refactoring.refactors()
 end
 
-function M.file_browser_relative()
-    return M.file_browser { path = "%:p:h" }
-end
-
 function M.gateway()
     return require("alejandro.php.gateway").graphql_definitions {
         layout_config = {
@@ -153,6 +149,10 @@ function M.gateway()
     }
 end
 
+function M.file_browser_relative()
+    return M.file_browser { path = "%:p:h" }
+
+end
 function M.file_browser(opts)
     opts = opts or {}
 
