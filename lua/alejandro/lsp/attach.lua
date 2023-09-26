@@ -1,12 +1,6 @@
 local telescope_mapper = require "alejandro.telescope.mappings"
 
-local filetype_attach = setmetatable({}, {
-    __index = function()
-        return function() end
-    end,
-})
 return function(client, bufnr)
-    local filetype = vim.api.nvim_buf_get_option(0, "filetype")
     -- TODO: keymaps for lsp
     vim.keymap.set(
         "n",
