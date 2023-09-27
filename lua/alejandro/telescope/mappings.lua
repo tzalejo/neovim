@@ -46,7 +46,7 @@ map_tele("<leader>ph", "help_tags", { desc = "Neovim Help" })
 map_tele("<leader>pe", "buffers", { desc = "Open buffers" })
 map_tele("<leader>pr", "treesitter", { desc = "Treesitter buffer elements" })
 map_tele("<leader>bb", "file_browser_relative", { desc = "Current directory" })
-map_tele("<leader>bp", "file_browser", { desc = "Project directory" })
+map_tele("<leader>bf", "file_browser", { desc = "Project directory" })
 
 map_tele("<leader>ve", "diagnostics", { desc = "Diagnostic of the buffer" })
 map_tele("<leader>po", "api_specs", { desc = "Openapi directory" })

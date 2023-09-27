@@ -150,7 +150,7 @@ function M.gateway()
 end
 
 function M.file_browser_relative()
-    return M.file_browser { path = "%:p:h" }
+    return M.file_browser { path = "%:p:h", grouped= true }
 
 end
 function M.file_browser(opts)
@@ -158,6 +158,7 @@ function M.file_browser(opts)
 
     opts = {
         path = opts.path,
+        grouped = true,
         sorting_strategy = "ascending",
         scroll_strategy = "cycle",
         layout_config = {
