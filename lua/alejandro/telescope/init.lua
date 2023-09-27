@@ -137,10 +137,6 @@ function M.refactor()
     return require("telescope").extensions.refactoring.refactors()
 end
 
-function M.file_browser_relative()
-    return M.file_browser { path = "%:p:h" }
-end
-
 function M.gateway()
     return require("alejandro.php.gateway").graphql_definitions {
         layout_config = {
@@ -153,11 +149,16 @@ function M.gateway()
     }
 end
 
+function M.file_browser_relative()
+    return M.file_browser { path = "%:p:h", grouped= true }
+
+end
 function M.file_browser(opts)
     opts = opts or {}
 
     opts = {
         path = opts.path,
+        grouped = true,
         sorting_strategy = "ascending",
         scroll_strategy = "cycle",
         layout_config = {

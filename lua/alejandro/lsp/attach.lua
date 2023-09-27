@@ -1,12 +1,6 @@
 local telescope_mapper = require "alejandro.telescope.mappings"
 
-local filetype_attach = setmetatable({}, {
-    __index = function()
-        return function() end
-    end,
-})
 return function(client, bufnr)
-    local filetype = vim.api.nvim_buf_get_option(0, "filetype")
     -- TODO: keymaps for lsp
     vim.keymap.set(
         "n",
@@ -35,5 +29,8 @@ return function(client, bufnr)
     vim.bo.omnifunc = "v:lua.vim.lsp.omnifunc"
 
     -- Attach any filetype specific options to the client
-    filetype_attach[filetype](client, bufnr)
+    -- filetype_attach[filetype](client, bufnr)
+    if client.server_capabilities.inlayHintProvider then
+        vim.lsp.inlay_hint(bufnr, true)
+    end
 end
