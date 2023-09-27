@@ -35,7 +35,6 @@ vim.api.nvim_set_keymap(
 )
 -- TODO: keymap
 map_tele("<leader>fs", "project_files", { desc = "Open Project files" })
-map_tele("<leader>gc", "branches", { desc = "Git Branches selector" })
 map_tele("<leader>pw", "grep_word", { desc = "Grep word under cursor" })
 map_tele("<leader>ps", "grep_string", { desc = "Grep provided input string" })
 -- map_tele("<leader>rc", "search_config", { desc = "Search Files in .dotfiles directory" })
@@ -55,7 +54,9 @@ map_tele("<leader>po", "api_specs", { desc = "Openapi directory" })
 -- map_tele("<Leader>fs", "find_files", { desc = "Find Logs", no_ignore=true, search_dirs="./storage/logs" })
 map_tele("<Leader>ft", "live_grep", { desc = "Find text" })
 
+-- keymap git
 map_tele("<Leader>gst", "git_status", { desc = "Git status" }) -- Para ver status de cada archivo..
-map_tele("<Leader>gcm", "git_commits", { desc = "" }) -- Muestra el listado de commits hechos..
+map_tele("<Leader>gcm", "git_commits", { desc = "Git commits" }) -- Muestra el listado de commits hechos..
+map_tele("<leader>gc", "branches", { desc = "Git Branches selector" })
 
 return map_tele
