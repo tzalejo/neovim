@@ -6,6 +6,7 @@ return {
     "phpstan",
     --[[
     "docker-compose-language-service",
+    "emmet-ls",
     "lua-language-server",
     "phpactor",
     "phpcbf",
