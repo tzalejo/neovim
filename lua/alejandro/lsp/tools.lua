@@ -4,15 +4,17 @@ return {
     "codelldb",
     "phpcs",
     "phpstan",
-    --[[ "docker-compose-language-service",
+    --[[
+    "docker-compose-language-service",
     "lua-language-server",
-    "php-cs-fixer",
     "phpactor",
     "phpcbf",
     "phpcs",
+    "php-cs-fixer",
     "phpstan",
     "prettier",
     "stylua",
     "tailwindcss-language-server",
-    "typescript-language-server"  ]]
+    "typescript-language-server"
+    ]]
 }

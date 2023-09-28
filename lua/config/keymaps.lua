@@ -11,6 +11,10 @@ end
 -- TODO: General Keymaps
 ---------------------
 
+-- Ordenar una lista
+mapper("v", "<leader>oo", ":!sort<CR>")
+-- vnoremap "<leader>or :!sort<CR>"
+
 -- listar los Keymaps en telescope
 mapper("n", "<leader>key", ":Telescope keymaps<CR>")
 
