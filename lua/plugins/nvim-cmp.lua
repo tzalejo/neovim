@@ -60,12 +60,16 @@ cmp.setup({
 return {
     "hrsh7th/nvim-cmp",
     version = false, -- last release is way too old
-    event = "InsertEnter",
+    event = "VeryLazy",
     dependencies = {
         "hrsh7th/cmp-nvim-lsp",
         "hrsh7th/cmp-buffer",
         "hrsh7th/cmp-path",
+        "hrsh7th/cmp-cmdline",
+        "hrsh7th/cmp-git",
         "saadparwaiz1/cmp_luasnip",
+        "L3MON4D3/LuaSnip",
+        "windwp/nvim-autopairs",
     },
     opts = function()
         local cmp = require "cmp"

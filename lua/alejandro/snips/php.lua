@@ -105,7 +105,8 @@ M.arg = fmt([[{} ${}]], {
 })
 
 M._c = fmt(
-    [[{} function __construct({}) {{
+    [[{} function __construct({})
+{{
     {}
 }}]],
     {
@@ -118,7 +119,8 @@ M._c = fmt(
 M._p = fmt(
     [[{} function __construct(
     {}
-) {{
+)
+{{
 }}]],
     {
         visibility(1, "public"),
