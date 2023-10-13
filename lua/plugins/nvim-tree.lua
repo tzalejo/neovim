@@ -54,10 +54,10 @@ return {
                 -- root_folder_label = false,
                 side = "left",
                 preserve_window_proportions = true,
-                mappings = {
+                --[[ mappings = {
                     custom_only = false,
                     list = {},
-                },
+                }, ]]
                 number = false,
                 relativenumber = false,
                 signcolumn = "yes",
