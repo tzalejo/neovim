@@ -275,11 +275,10 @@ return {
             "regex",
             "vim",
             "yaml",
-
         },
         highlight = {
             enable = true,
-            additional_vim_regex_highlighting = { "org" },
+            additional_vim_regex_highlighting = false,
         },
         indent = {
             enable = true,
@@ -298,6 +297,8 @@ return {
                 },
             },
         },
+        sync_install = true,
+        auto_install = true,
         incremental_selection = {
             enable = true,
             keymaps = {
