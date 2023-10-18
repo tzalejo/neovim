@@ -3,21 +3,14 @@ return {
     dependencies = {
         "jose-elias-alvarez/null-ls.nvim",
         {
-            "folke/neodev.nvim",
-            opts = {
-                lspconfig = true,
-                pathStrict = true,
-            },
-        },
-        {
             "williamboman/mason.nvim",
-            config = true,
             opts = {
                 ui = {
                     border = "rounded",
                 },
             },
         },
+        "folke/neodev.nvim",
         "williamboman/mason-lspconfig.nvim",
         "WhoIsSethDaniel/mason-tool-installer.nvim",
     },

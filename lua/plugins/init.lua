@@ -27,9 +27,6 @@ return {
     -- Permite seleccion rapida
     { "mg979/vim-visual-multi", branch = "master" },
 
-    "jwalton512/vim-blade",
-    {
-        "tpope/vim-dispatch",
-        cmd = { "Make", "Dispatch" },
-    },
+    {"jwalton512/vim-blade", enabled = false},
+
 }
