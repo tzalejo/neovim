@@ -46,8 +46,6 @@ return {
     { "onecentlin/laravel-blade-snippets-vscode" },
     { "onecentlin/laravel5-snippets-vscode" },
 
-    "jwalton512/vim-blade",
-    {
-        "tpope/vim-dispatch",
-    },
+    {"jwalton512/vim-blade", enabled = false},
+
 }

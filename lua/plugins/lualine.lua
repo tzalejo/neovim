@@ -4,7 +4,7 @@ return {
     config = function()
         require("lualine").setup {
             options = {
-                theme = "catppuccin",
+                theme = "auto",
                 icons_enabled = true,
                 globalstatus = true,
             },
@@ -16,6 +16,11 @@ return {
                 lualine_x = {
                     "diagnostics",
                     "diff",
+                    {
+                        require("noice").api.status.mode.get,
+                        cond = require("noice").api.status.mode.has,
+                        color = { fg = "#ff9e64" },
+                    },
                     {
                         require("lazy.status").updates,
                         cond = require("lazy.status").has_updates,
