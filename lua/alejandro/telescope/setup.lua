@@ -176,3 +176,9 @@ require("telescope").load_extension "notify"
 require("telescope").load_extension "file_browser"
 require("telescope").load_extension "ui-select"
 require("telescope").load_extension "fzf"
+
+local map = vim.keymap
+
+map.set('n', '<leader>la', require("alejandro.telescope.custom").laravel_artisan, {})
+map.set('n', '<leader>lp', require("alejandro.telescope.custom").project_find, {})
+

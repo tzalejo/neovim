@@ -27,9 +27,27 @@ return {
     -- Permite seleccion rapida
     { "mg979/vim-visual-multi", branch = "master" },
 
+    {'tpope/vim-surround'},
+    {'tpope/vim-repeat'},
+    {'tpope/vim-dispatch'},
+    {'tpope/vim-projectionist'},
+
+    {'noahfrederick/vim-composer'},
+    {'noahfrederick/vim-laravel'},
+    {"Kibadda/laravel-docs.nvim"},
+
+    --[[ {'hrsh7th/cmp-vsnip'},
+    {'hrsh7th/vim-vsnip'},
+    {'hrsh7th/vim-vsnip-integ'},
+    {'saadparwaiz1/cmp_luasnip'}, -- Snippets source for nvim-cmp
+    {'L3MON4D3/LuaSnip'}, -- Snippets plugin
+    {"rafamadriz/friendly-snippets"}, ]]
+
+    { "onecentlin/laravel-blade-snippets-vscode" },
+    { "onecentlin/laravel5-snippets-vscode" },
+
     "jwalton512/vim-blade",
     {
         "tpope/vim-dispatch",
-        cmd = { "Make", "Dispatch" },
     },
 }

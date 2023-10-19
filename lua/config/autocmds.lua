@@ -32,6 +32,14 @@ vim.api.nvim_create_autocmd("FileType", {
     end,
 })
 
+
+vim.api.nvim_exec([[
+augroup FormatAutogroup
+autocmd!
+autocmd BufWritePost *.vue FormatWrite
+augroup END
+]], true)
+
 vim.api.nvim_create_autocmd({ "BufWritePre" }, {
     callback = function()
         vim.cmd [[%s/\s\+$//e]]
