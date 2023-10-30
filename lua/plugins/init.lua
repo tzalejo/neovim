@@ -27,14 +27,14 @@ return {
     -- Permite seleccion rapida
     { "mg979/vim-visual-multi", branch = "master" },
 
-    {'tpope/vim-surround'},
-    {'tpope/vim-repeat'},
-    {'tpope/vim-dispatch'},
-    {'tpope/vim-projectionist'},
+    { "tpope/vim-surround" },
+    { "tpope/vim-repeat" },
+    { "tpope/vim-dispatch" },
+    { "tpope/vim-projectionist" },
 
-    {'noahfrederick/vim-composer'},
-    {'noahfrederick/vim-laravel'},
-    {"Kibadda/laravel-docs.nvim"},
+    { "noahfrederick/vim-composer" },
+    { "noahfrederick/vim-laravel" },
+    { "Kibadda/laravel-docs.nvim" },
 
     --[[ {'hrsh7th/cmp-vsnip'},
     {'hrsh7th/vim-vsnip'},
@@ -46,6 +46,5 @@ return {
     { "onecentlin/laravel-blade-snippets-vscode" },
     { "onecentlin/laravel5-snippets-vscode" },
 
-    {"jwalton512/vim-blade", enabled = false},
-
+    { "jwalton512/vim-blade" },
 }
