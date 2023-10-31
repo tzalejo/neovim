@@ -36,9 +36,13 @@ vim.api.nvim_set_keymap(
 -- TODO: keymap
 map_tele("<leader>fs", "project_files", { desc = "Open Project files" })
 map_tele("<leader>pw", "grep_word", { desc = "Grep word under cursor" })
-map_tele("<leader>ps", "grep_string", { desc = "Grep provided input string" })
-map_tele("<leader>pe", "buffers", { desc = "Open buffers" })
-map_tele("<leader>pr", "treesitter", { desc = "Treesitter buffer elements" }) --muestra funciones y variables.
+-- map_tele("<leader>ps", "grep_string", { desc = "Grep provided input string" })
+-- map_tele("<leader>pe", "buffers", { desc = "Open buffers" })
+-- map_tele("<leader>pr", "treesitter", { desc = "Treesitter buffer elements", buffer = 0 }) --muestra funciones y variables.
+
+vim.keymap.set("n", "<leader>ps", ":Telescope grep_string <CR>", { desc = "Grep provided input string" })
+vim.keymap.set("n", "<leader>pe", ":Telescope buffers<CR>", { desc = "Open buffers" })
+vim.keymap.set("n", "<leader>pr", ":Telescope treesitter<CR>", { desc = "Treesitter buffer elements" })
 
 -- map_tele("<leader>rc", "search_config", { desc = "Search Files in .dotfiles directory" })
 map_tele("<leader>ph", "help_tags", { desc = "Neovim Help" })
