@@ -11,6 +11,12 @@ end
 -- TODO: General Keymaps
 ---------------------
 
+--  borrar hacia atras del cursor
+mapper("n", "dw", "vb_d")
+
+-- seleecionar todo
+mapper("n", "<C-a>",  "gg<S-v>G")
+
 -- Ordenar una lista
 mapper("v", "<leader>oo", ":!sort<CR>")
 -- vnoremap "<leader>or :!sort<CR>"
