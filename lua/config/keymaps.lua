@@ -12,7 +12,7 @@ end
 ---------------------
 
 --  borrar hacia atras del cursor
-mapper("n", "dw", "vb_d")
+mapper("n", "dx", "vb_d")
 
 -- seleecionar todo
 mapper("n", "<C-a>",  "gg<S-v>G")
