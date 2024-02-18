@@ -1,15 +1,4 @@
 return {
-
-    { "bluz71/vim-nightfly-guicolors" }, -- preferred colorscheme
-    { "christoomey/vim-tmux-navigator" }, -- tmux & split window navigation
-    { "szw/vim-maximizer" }, -- maximizes and restores current window
-
-    -- essential plugins
-    { "inkarkat/vim-ReplaceWithRegister" }, -- replace with register contents using motion {gr + motion)
-
-    -- commenting with gc
-    { "numToStr/Comment.nvim" },
-
     -- Para realizar comentarios
     { "b3nj5m1n/kommentary" },
 
