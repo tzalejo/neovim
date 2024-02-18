@@ -1,10 +1,8 @@
 return {
-    -- Para realizar comentarios
-    { "b3nj5m1n/kommentary" },
+    { "christoomey/vim-tmux-navigator" }, -- tmux & split window navigation
 
-    { "rafamadriz/friendly-snippets" }, -- ful snippets
-    { "jose-elias-alvarez/typescript.nvim" }, -- additional functionality for typescript server {e.g. rename file & update imports)
-    { "onsails/lspkind.nvim" }, -- vs-code like icons for autocompletion
+     -- Para realizar comentarios
+    { "b3nj5m1n/kommentary" },
 
     -- Permite eliminar búferes {cerrar archivos) sin cerrar sus ventanas o estropear su diseño.
     { "moll/vim-bbye" },
