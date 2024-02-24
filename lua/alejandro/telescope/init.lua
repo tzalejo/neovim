@@ -1,4 +1,4 @@
-SHOULD_RELOAD_TELESCOPE = true
+local SHOULD_RELOAD_TELESCOPE = false
 
 local reloader = function()
     if SHOULD_RELOAD_TELESCOPE then
@@ -10,7 +10,7 @@ end
 
 local fb_actions = require("telescope").extensions.file_browser.actions
 local actions = require "telescope.actions"
-local my_actions = require "alejandro.telescope.actions"
+local my_actions = require "alejandro.telescope.my_actions"
 
 local M = {}
 
