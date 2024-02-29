@@ -16,7 +16,9 @@
 -- auto closing
 return {
     "windwp/nvim-autopairs",
-    config = function()
+    lazy = true,
+    config = true,
+    --[[ config = function()
         require("nvim-autopairs").setup {
             check_ts = true, --enable tresitter
             ts_config = {
@@ -25,5 +27,5 @@ return {
                 java = false, --don`t check treesitter on java
             },
         }
-    end,
+    end, ]]
 } -- autoclose parens, brackets, quotes, etc...
