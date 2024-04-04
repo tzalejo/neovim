@@ -63,6 +63,6 @@ map_tele("<Leader>ft", "live_grep", { desc = "Find text" })
 -- keymap git
 map_tele("<Leader>gst", "git_status", { desc = "Git status" }) -- Para ver status de cada archivo..
 map_tele("<Leader>gcm", "git_commits", { desc = "Git commits" }) -- Muestra el listado de commits hechos..
-map_tele("<leader>gc", "branches", { desc = "Git Branches selector" })
+map_tele("<leader>gb", "branches", { desc = "Git Branches selector" })
 
 return map_tele
