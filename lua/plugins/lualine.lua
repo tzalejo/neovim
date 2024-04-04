@@ -5,9 +5,22 @@ return {
     config = function()
         require("lualine").setup {
             options = {
-                theme = "auto",
+                theme = "gruvbox",
                 icons_enabled = true,
-                globalstatus = true,
+                component_separators = { left = "", right = "" },
+                section_separators = { left = "", right = "" },
+                disabled_filetypes = {
+                    statusline = {},
+                    winbar = {},
+                },
+                ignore_focus = {},
+                always_divide_middle = true,
+                globalstatus = false,
+                refresh = {
+                    statusline = 1000,
+                    tabline = 1000,
+                    winbar = 1000,
+                },
             },
             extensions = { "quickfix", "fugitive" },
             sections = {
