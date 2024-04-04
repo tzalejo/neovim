@@ -4,7 +4,6 @@ local luasnip = require "luasnip"
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
 local compare = require "cmp.config.compare"
 
-cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
 
 cmp.setup {
     mapping = {
@@ -96,6 +95,7 @@ cmp.setup {
     },
 }
 
+cmp.event:on("confirm_done", cmp_autopairs.on_confirm_done { map_char = { tex = "" } })
 vim.api.nvim_set_hl(0, "CmpItemKindCopilot", { fg = "#6CC644" })
 
 -- Set configuration for specific filetype.
