@@ -41,7 +41,7 @@ local phpactor = function()
 end
 
 return {
-    "adalessa/phpactor.nvim",
+    "gbprod/phpactor.nvim",
     cmd = { "PhpActor" },
     keys = {
         { "<leader>pa", phpactor, desc = "PhpActor options" },
