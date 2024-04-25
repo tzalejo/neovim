@@ -3,13 +3,25 @@ vim.g.mapleader = " "
 local keymap = vim.keymap --for consisenes
 
 -- Mapping helper
-local mapper = function(mode, key, result)
-    vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true })
-end
+local mapper = function(mode, key, result) vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true }) end
 
 ---------------------
 -- TODO: General Keymaps
 ---------------------
+
+-- Copy text to " register
+mapper("n", "<leader>y", '"+y')
+mapper("v", "<leader>y", '"+y')
+mapper("n", "<leader>Y", '"+Y')
+
+-- Copy file paths
+mapper("n", "<leader>cp", '<cmd>let @+ = expand("%:p")<CR>') -- "Copy File Path"
+
+--Reemplazar la palabra bajo el cursor en todo el buffer, como reenombrar
+mapper("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+
+-- Pegar sin sobrescribir el registro
+mapper("v", "p", '"_dP')
 
 --  borrar hacia atras del cursor
 mapper("n", "dx", "vb_d")
@@ -22,7 +34,7 @@ mapper("v", "<leader>oo", ":!sort<CR>")
 -- vnoremap "<leader>or :!sort<CR>"
 
 -- listar los Keymaps en telescope
-mapper("n", "<leader>key", ":Telescope keymaps<CR>")
+-- mapper("n", "<leader>key", ":Telescope keymaps<CR>")
 
 -- ver todo los archivos en la carpeta logs
 mapper("n", "<Leader>log", ":Telescope find_files search_dirs={'./storage/logs'} no_ignore=true<CR>")
@@ -48,7 +60,7 @@ mapper("n", "<Leader>sx", ":close<CR>")
 mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 
 -- Para recargar un archivo de forma manual
-mapper("n", "<Leader>s", ":so<CR>")
+-- mapper("n", "<Leader>s", ":so<CR>")
 
 -- Para desplazarno en una linea
 mapper("n", "<A-h>", "0")
@@ -66,7 +78,7 @@ mapper("n", "<esc>", ":noh<return><esc>")
 mapper("n", "tt", ":t.<CR>")
 
 -- comentar codigo
-mapper("n", "cc", "<Plug>kommentary_line_default")
+-- mapper("n", "cc", "<Plug>kommentary_line_default")
 mapper("n", "gc", "<Plug>kommentary_visual_default<C-c>")
 
 mapper("n", "<Leader>to", ":TodoTelescope<CR>")
@@ -80,7 +92,7 @@ mapper("n", "ff", ":HopChar2<CR>") -- busqueda con dos letras
 -- Menu desplegable NERDTree
 mapper("n", "<Leader>nt", ":NvimTreeOpen<CR>")
 mapper("n", "<Leader>nn", ":NvimTreeClose<CR>")
-mapper("n", "<Leader>nu", ":NvimTreeRefresh<CR>")
+--mapper("n", "<Leader>nu", ":NvimTreeRefresh<CR>")
 
 -- Redimensiono las ventanas arriba, abajo, izquierda y derecha
 mapper("n", "<C-Up>", ":resize -2<CR>")
@@ -93,4 +105,11 @@ mapper("n", "<Leader>va", ":split<CR>") -- ventana arriba
 mapper("n", "<Leader>vi", ":vsplit<CR>") -- ventana izquierda
 
 -- Cerrar una buffer
-mapper("n", "<C-w>", ":Bdelete<CR>")
+-- mapper("n", "<C-w>", ":Bdelete<CR>")
+
+-- Telescope
+-- mapper("n", "<Leader>pr", ":Telescope treesitter<CR>")
+-- mapper("n", "<Leader>fs", ":Telescope live_grep<CR>")
+-- mapper("n", "<Leader>gst", ":Telescope git_status<CR>")
+-- mapper("n", "<Leader>gcm", ":Telescope git_commits<CR>")
+-- mapper("n", "<Leader>pw", ":Telescope grep_word<CR>")

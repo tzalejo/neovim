@@ -1,5 +1,5 @@
 return {
-    "folke/twilight.nvim",
-    cmd = { "Twilight" },
-    config = true,
+  "folke/twilight.nvim",
+  cmd = { "Twilight" },
+  config = true,
 }
