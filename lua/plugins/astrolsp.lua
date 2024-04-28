@@ -95,11 +95,11 @@ return {
           desc = "Declaration of current symbol",
           cond = "textDocument/declaration",
         },
-        -- gi = {
-        --   function() vim.lsp.buf.implementation() end,
-        --   desc = "Implementation of current symbol",
-        --   cond = "textDocument/declaration",
-        -- },
+        gi = {
+          function() vim.lsp.buf.implementation() end,
+          desc = "Implementation of current symbol",
+          cond = "textDocument/declaration",
+        },
         gr = {
           function() vim.lsp.buf.references() end,
           desc = "References of current symbol",
