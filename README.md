@@ -57,7 +57,6 @@ nvim
 | Alterar pliegue             | za           |
 | Reducir todo los pliegues   | zr           |
 | Aplicar todo los pliegues   | zm           |
-| --------------------------- | ------------ |
 
 ### Buffers
 
@@ -81,14 +80,12 @@ nvim
 | Sort buffers by relative path                                       | Leader + bsr  |
 | Open a buffer tab in a new horizontal split with interactive picker | Leader + b\\  |
 | Open a buffer tab in a new vertical split with interactive picker   | Leader + b \| |
-| ------------------------------------------------------------------- | ------------- |
 
 ### Better Escape
 
-| Action        | Mappings      |
-| ------------- | ------------- |
-| Escape key    | jj, jk        |
-| ------------- | ------------- |
+| Action     | Mappings |
+| ---------- | -------- |
+| Escape key | jj, jk   |
 
 ### Completion
 
@@ -103,49 +100,44 @@ nvim
 | Cancel completion                      | Ctrl + e                            |
 | Scroll up completion docs              | Ctrl + u                            |
 | Scroll down completion docs            | Ctrl + d                            |
-| -------------------------------------- | ----------------------------------- |
 
 ### Neo-Tree
 
-| Action            | Mappings       |
-| ----------------- | -------------- |
-| Neotree toggle    | Leader + e     |
-| Neotree focus     | Leader + o     |
-| ----------------- | -------------- |
+| Action         | Mappings   |
+| -------------- | ---------- |
+| Neotree toggle | Leader + e |
+| Neotree focus  | Leader + o |
 
 ### Dashboard Mappings
 
-| Action            | Mappings       |
-| ----------------- | -------------- |
-| Dashboard (Home)  | Leader + h     |
-| ----------------- | -------------- |
+| Action           | Mappings   |
+| ---------------- | ---------- |
+| Dashboard (Home) | Leader + h |
 
 ### Session Manager Mappings
 
-| Action                         | Mappings       |
-| ------------------------------ | -------------- |
-| Save Session                   | Leader + Ss    |
-| Last Session                   | Leader + Sl    |
-| Delete Session                 | Leader + Sd    |
-| Delete Directory Session       | Leader + SD    |
-| Search Sessions                | Leader + Sf    |
-| Search Directory Sessions      | Leader + SF    |
-| Load Current Directory Session | Leader + S.    |
-| ------------------------------ | -------------- |
+| Action                         | Mappings    |
+| ------------------------------ | ----------- |
+| Save Session                   | Leader + Ss |
+| Last Session                   | Leader + Sl |
+| Delete Session                 | Leader + Sd |
+| Delete Directory Session       | Leader + SD |
+| Search Sessions                | Leader + Sf |
+| Search Directory Sessions      | Leader + SF |
+| Load Current Directory Session | Leader + S. |
 
 ### Package Management Mappings
 
-| Action                         | Mappings       |
-| ------------------------------ | -------------- |
-| Update Lazy and Mason          | Leader + pa    |
-| Plugins Install                | Leader + pi    |
-| Mason Installer                | Leader + pm    |
-| Mason Updater                  | Leader + pM    |
-| Plugins Status                 | Leader + ps    |
-| Plugins Sync                   | Leader + pS    |
-| Plugins Check for Updates      | Leader + pu    |
-| Plugins Update                 | Leader + pU    |
-| ------------------------------ | -------------- |
+| Action                    | Mappings    |
+| ------------------------- | ----------- |
+| Update Lazy and Mason     | Leader + pa |
+| Plugins Install           | Leader + pi |
+| Mason Installer           | Leader + pm |
+| Mason Updater             | Leader + pM |
+| Plugins Status            | Leader + ps |
+| Plugins Sync              | Leader + pS |
+| Plugins Check for Updates | Leader + pu |
+| Plugins Update            | Leader + pU |
 
 ### LSP Mappings
 
@@ -170,7 +162,6 @@ nvim
 | Definition           | gd              |
 | Implementation       | gI              |
 | References           | gr, Leader + lR |
-| -------------------- | --------------- |
 
 ### Debugger Mappings
 
@@ -192,7 +183,6 @@ nvim
 | Toggle REPL             | Leader + dR            |
 | Toggle Debugger UI      | Leader + du            |
 | Debugger Hover          | Leader + dh            |
-| ----------------------- | ---------------------- |
 
 ### Telescope Mappings
 
@@ -219,7 +209,6 @@ nvim
 | Git Status                        | Leader + gt |
 | LSP Symbols                       | Leader + ls |
 | LSP Workspace Symbols             | Leader + lG |
-| --------------------------------- | ----------- |
 
 ### Terminal Mappings
 
@@ -232,7 +221,6 @@ nvim
 | Open Toggle node         | Leader + tn         |
 | Open Toggle Python       | Leader + tp         |
 | Open Toggle btm          | Leader + tt         |
-| ------------------------ | ------------------- |
 
 ### UI/UX Mappings
 
@@ -267,4 +255,3 @@ nvim
 | Toggle syntax highlighting (buffer)    | Leader + uy  |
 | Toggle LSP semantic tokens (buffer)    | Leader + uY  |
 | Toggle color highlighting              | Leader + uz  |
-| -------------------------------------- | ------------ |
