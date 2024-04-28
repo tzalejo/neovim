@@ -1,4 +1,4 @@
-if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
+-- if true then return {} end -- WARN: REMOVE THIS LINE TO ACTIVATE THIS FILE
 
 -- AstroUI provides the basis for configuring the AstroNvim User Interface
 -- Configuration documentation can be found with `:h astroui`
@@ -25,16 +25,16 @@ return {
         -- return a table of highlights for telescope based on
         -- colors gotten from highlight groups
         return {
-          TelescopeBorder = { fg = bg_alt, bg = bg },
+          -- TelescopeBorder = { fg = bg_alt, bg = bg },
           TelescopeNormal = { bg = bg },
-          TelescopePreviewBorder = { fg = bg, bg = bg },
+          -- TelescopePreviewBorder = { fg = bg, bg = bg },
           TelescopePreviewNormal = { bg = bg },
           TelescopePreviewTitle = { fg = bg, bg = green },
-          TelescopePromptBorder = { fg = bg_alt, bg = bg_alt },
+          -- TelescopePromptBorder = { fg = bg_alt, bg = bg_alt },
           TelescopePromptNormal = { fg = fg, bg = bg_alt },
           TelescopePromptPrefix = { fg = red, bg = bg_alt },
           TelescopePromptTitle = { fg = bg, bg = red },
-          TelescopeResultsBorder = { fg = bg, bg = bg },
+          -- TelescopeResultsBorder = { fg = bg, bg = bg },
           TelescopeResultsNormal = { bg = bg },
           TelescopeResultsTitle = { fg = bg, bg = bg },
         }
