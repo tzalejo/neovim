@@ -65,22 +65,28 @@ return {
   -- customize alpha options
   {
     "goolord/alpha-nvim",
-    opts = function(_, opts)
-      -- customize the dashboard header
-      opts.section.header.val = {
-        " █████  ███████ ████████ ██████   ██████",
-        "██   ██ ██         ██    ██   ██ ██    ██",
-        "███████ ███████    ██    ██████  ██    ██",
-        "██   ██      ██    ██    ██   ██ ██    ██",
-        "██   ██ ███████    ██    ██   ██  ██████",
-        " ",
-        "    ███    ██ ██    ██ ██ ███    ███",
-        "    ████   ██ ██    ██ ██ ████  ████",
-        "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
-        "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
-        "    ██   ████   ████   ██ ██      ██",
-      }
-      return opts
+    dependencies = {
+      "nvim-tree/nvim-web-devicons",
+    },
+    config = function()
+      require("alpha").setup(require("alpha.themes.startify").config)
+      -- opts = function(_, opts)
+      --   -- customize the dashboard header
+      --   opts.section.header.val = {
+      --     " █████  ███████ ████████ ██████   ██████",
+      --     "██   ██ ██         ██    ██   ██ ██    ██",
+      --     "███████ ███████    ██    ██████  ██    ██",
+      --     "██   ██      ██    ██    ██   ██ ██    ██",
+      --     "██   ██ ███████    ██    ██   ██  ██████",
+      --     " ",
+      --     "    ███    ██ ██    ██ ██ ███    ███",
+      --     "    ████   ██ ██    ██ ██ ████  ████",
+      --     "    ██ ██  ██ ██    ██ ██ ██ ████ ██",
+      --     "    ██  ██ ██  ██  ██  ██ ██  ██  ██",
+      --     "    ██   ████   ████   ██ ██      ██",
+      --   }
+      --   return opts
+      -- end,
     end,
   },
 
