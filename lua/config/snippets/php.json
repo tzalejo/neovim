@@ -1,0 +1,76 @@
+{
+  "Clase básica": {
+    "prefix": "clase",
+    "body": [
+      "<?php",
+      "",
+      "class ${1:ClassName} {",
+      "  // Propiedades, métodos, y constructores aquí",
+      "}"
+    ],
+    "description": "Clase básica"
+  },
+  "Método de clase": {
+    "prefix": "metodo",
+    "body": [
+      "public function ${1:methodName}(${2:$arg}) {",
+      "  // Código del método aquí",
+      "}"
+    ],
+    "description": "Método de clase"
+  },
+  "Método estático de clase": {
+    "prefix": "static",
+    "body": [
+      "public static function ${1:methodName}(${2:$arg}) {",
+      "  // Código del método estático aquí",
+      "}"
+    ],
+    "description": "Método estático de clase"
+  },
+  "Constructor de clase": {
+    "prefix": "construct",
+    "body": [
+      "public function __construct(${1:$arg}) {",
+      "  // Código del constructor aquí",
+      "}"
+    ],
+    "description": "Constructor de clase"
+  },
+  "Función": {
+    "prefix": "funcion",
+    "body": [
+      "function ${1:functionName}(${2:$arg}) {",
+      "  // Código de la función aquí",
+      "}"
+    ],
+    "description": "Función"
+  },
+  "Función anónima": {
+    "prefix": "anonima",
+    "body": [
+      "function(${1:$arg}) {",
+      "  // Código de la función anónima aquí",
+      "}"
+    ],
+    "description": "Función anónima"
+  },
+  "Constructor de array": {
+    "prefix": "array",
+    "body": [
+      "$${1:arrayName} = [",
+      "  ${2:key} => ${3:value},",
+      "];"
+    ],
+    "description": "Constructor de array"
+  },
+  "Bucle foreach": {
+    "prefix": "foreach",
+    "body": [
+      "foreach ($${1:array} as $${2:key} => $${3:value}) {",
+      "  // Código del bucle foreach aquí",
+      "}"
+    ],
+    "description": "Bucle foreach"
+  }
+}

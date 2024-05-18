@@ -1,0 +1,80 @@
+{
+  "Función básica": {
+    "prefix": "func",
+    "body": [
+      "public function ${1:functionName}(${2:parameter}) {",
+      "  // Código de la función aquí",
+      "}"
+    ],
+    "description": "Función básica"
+  },
+  "Función de flecha": {
+    "prefix": "arrow",
+    "body": [
+      "const ${1:functionName} = (${2:parameter}) => {",
+      "  // Código de la función de flecha aquí",
+      "};"
+    ],
+    "description": "Función de flecha"
+  },
+  "Clase básica": {
+    "prefix": "class",
+    "body": [
+      "class ${1:ClassName} {",
+      "  constructor(${2:parameter}) {",
+      "    // Código del constructor aquí",
+      "  }",
+      "",
+      "  ${3:method}() {",
+      "    // Código del método aquí",
+      "  }",
+      "}"
+    ],
+    "description": "Clase básica"
+  },
+  "Método de objeto": {
+    "prefix": "method",
+    "body": [
+      "${1:methodName}(${2:parameter}) {",
+      "  // Código del método aquí",
+      "}"
+    ],
+    "description": "Método de objeto"
+  },
+  "Constructor de objeto": {
+    "prefix": "constructor",
+    "body": [
+      "const ${1:objectName} = {",
+      "  ${2:key}: ${3:value},",
+      "};"
+    ],
+    "description": "Constructor de objeto"
+  },
+  "Bucle for": {
+    "prefix": "for",
+    "body": [
+      "for (let ${1:i} = 0; ${1:i} < ${2:length}; ${1:i}++) {",
+      "  // Código del bucle for aquí",
+      "}"
+    ],
+    "description": "Bucle for"
+  },
+  "Bucle while": {
+    "prefix": "while",
+    "body": [
+      "while (${1:condition}) {",
+      "  // Código del bucle while aquí",
+      "}"
+    ],
+    "description": "Bucle while"
+  },
+  "Bucle forEach": {
+    "prefix": "forEach",
+    "body": [
+      "${1:array}.forEach((${2:item}) => {",
+      "  // Código del bucle forEach aquí",
+      "});"
+    ],
+    "description": "Bucle forEach"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "Estructura básica de HTML": {
+    "prefix": "html",
+    "body": [
+      "<!DOCTYPE html>",
+      "<html lang=\"en\">",
+      "<head>",
+      "  <meta charset=\"UTF-8\">",
+      "  <meta name=\"viewport\" content=\"width=device-width, initial-scale=1.0\">",
+      "  <title>${1:Título}</title>",
+      "</head>",
+      "<body>",
+      "  $0",
+      "</body>",
+      "</html>"
+    ],
+    "description": "Estructura básica de HTML"
+  },
+  "Elemento de encabezado (h1-h6)": {
+    "prefix": "h",
+    "body": [
+      "<h${1:1}>${2:Título}</h${1:1}>"
+    ],
+    "description": "Elemento de encabezado (h1-h6)"
+  }
+}

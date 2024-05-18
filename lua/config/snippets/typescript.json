@@ -1,0 +1,151 @@
+{
+  "Something": {
+    "prefix": "smt",
+    "body": [
+      "const { ${1:name} } = this.props"
+    ]
+  },
+  "React Functional Component": {
+    "prefix": "rfc",
+    "body": [
+      "import React, { FunctionComponent } from 'react';",
+      "",
+      "interface ${1:Props} {",
+      "  // Define props here",
+      "}",
+      "",
+      "const ${2:ComponentName}: FunctionComponent<${1:Props}> = ({ ${3:prop1}, ${4:prop2} }) => {",
+      "  return (",
+      "    <div>",
+      "      {/* Component JSX here */}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${2:ComponentName};"
+    ],
+    "description": "React Functional Component"
+  },
+  "Interface": {
+    "prefix": "interface",
+    "body": [
+      "interface ${1:InterfaceName} {",
+      "  ${2:propertyName}: ${3:type};",
+      "}"
+    ],
+    "description": "Interface"
+  },
+  "Type Alias": {
+    "prefix": "type",
+    "body": [
+      "type ${1:TypeName} = ${2:type};"
+    ],
+    "description": "Type Alias"
+  },
+  "React Class Component": {
+    "prefix": "rcc",
+    "body": [
+      "import React, { Component } from 'react';",
+      "",
+      "interface Props {",
+      "  // Define props here",
+      "}",
+      "",
+      "interface State {",
+      "  // Define state here",
+      "}",
+      "",
+      "class ${1:ComponentName} extends Component<Props, State> {",
+      "  constructor(props: Props) {",
+      "    super(props);",
+      "    this.state = {",
+      "      // Initialize state here",
+      "    };",
+      "  }",
+      "",
+      "  render() {",
+      "    return (",
+      "      <div>",
+      "        {/* Component JSX here */}",
+      "      </div>",
+      "    );",
+      "  }",
+      "}",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "React Class Component"
+  },
+  "React Function Component with Hooks": {
+    "prefix": "rfh",
+    "body": [
+      "import React, { useState, useEffect } from 'react';",
+      "",
+      "interface Props {",
+      "  // Define props here",
+      "}",
+      "",
+      "const ${1:ComponentName}: React.FC<Props> = ({ ${2:prop1}, ${3:prop2} }) => {",
+      "  const [${4:state}, set${4/(.*)/${1:/capitalize}/}] = useState<${5:type}>(initialValue);",
+      "",
+      "  useEffect(() => {",
+      "    // Effect logic here",
+      "  }, []);",
+      "",
+      "  return (",
+      "    <div>",
+      "      {/* Component JSX here */}",
+      "    </div>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ComponentName};"
+    ],
+    "description": "React Function Component with Hooks"
+  },
+  "React Context Provider": {
+    "prefix": "rcp",
+    "body": [
+      "import React, { createContext, useContext, useReducer } from 'react';",
+      "",
+      "interface State {",
+      "  // Define state here",
+      "}",
+      "",
+      "interface Action {",
+      "  type: string;",
+      "  payload: any;",
+      "}",
+      "",
+      "const initialState: State = {",
+      "  // Initialize state here",
+      "};",
+      "",
+      "const reducer = (state: State, action: Action) => {",
+      "  switch (action.type) {",
+      "    // Reducer cases here",
+      "    default:",
+      "      return state;",
+      "  }",
+      "};",
+      "",
+      "const ${1:ContextName}Context = createContext<{ state: State; dispatch: React.Dispatch<Action> }>({",
+      "  state: initialState,",
+      "  dispatch: () => null",
+      "});",
+      "",
+      "export const use${1/^(\\w)/${1:/capitalize}/} = () => useContext(${1:ContextName}Context);",
+      "",
+      "export const ${1:ContextName}Provider: React.FC = ({ children }) => {",
+      "  const [state, dispatch] = useReducer(reducer, initialState);",
+      "",
+      "  return (",
+      "    <${1:ContextName}Context.Provider value={{ state, dispatch }}>{children}</${1:ContextName}Context.Provider>",
+      "  );",
+      "};",
+      "",
+      "export default ${1:ContextName}Context;"
+    ],
+    "description": "React Context Provider"
+  }
+}
