@@ -15,7 +15,7 @@ return {
         "lua_ls",
         "eslint",
         "phpactor",
-        "stimulus_ls",
+        -- "stimulus_ls",
         "tailwindcss",
         "tsserver",
       })
