@@ -58,6 +58,7 @@ mapper("n", "<Leader>sx", ":close<CR>")
 
 -- Git messenger
 mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
+mapper("n", "<Leader>go", ":Gitsigns toggle_current_line_blame<CR>")
 
 -- Para recargar un archivo de forma manual
 -- mapper("n", "<Leader>s", ":so<CR>")

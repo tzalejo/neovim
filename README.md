@@ -207,6 +207,7 @@ nvim
 | Git Commits (repository)          | Leader + gc |
 | Git Commits (current file)        | Leader + gC |
 | Git Status                        | Leader + gt |
+| Git Previous hunk                 | Leader + gp |
 | LSP Symbols                       | Leader + ls |
 | LSP Workspace Symbols             | Leader + lG |
 
