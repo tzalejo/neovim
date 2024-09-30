@@ -9,6 +9,9 @@ local mapper = function(mode, key, result) vim.api.nvim_set_keymap(mode, key, re
 -- TODO: General Keymaps
 ---------------------
 
+-- Para guardar todo los archivos
+mapper("n", "<leader>W", ":wa<CR>")
+
 -- Copy text to " register
 mapper("n", "<leader>y", '"+y')
 mapper("v", "<leader>y", '"+y')
