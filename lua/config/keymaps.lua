@@ -46,7 +46,7 @@ mapper("n", "<Leader>log", ":Telescope find_files search_dirs={'./storage/logs'}
 mapper("n", "<leader>he", ":checkhealth<CR>") -- "Open .env file in a vertical split"
 
 -- quick env file edit
-mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split"
+mapper("n", "<leader>ee", ":vsp .env<CR>")               -- "Open .env file in a vertical split"
 mapper("n", "<leader>dc", ":vsp docker-compose.yml<CR>") -- "Open docker-compose file in a vertical split"
 
 mapper("t", "<Esc><Esc>", "<C-\\><C-n>")
@@ -62,6 +62,8 @@ mapper("n", "<Leader>sx", ":close<CR>")
 -- Git messenger
 mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 mapper("n", "<Leader>go", ":Gitsigns toggle_current_line_blame<CR>")
+mapper("n", "<Leader>gn", ":Gitsigns next_hunk<CR>")    -- movernos entre cambios de git
+mapper("n", "<Leader>gp", ":Gitsigns preview_hunk<CR>") -- vista de los cambios
 
 -- Para recargar un archivo de forma manual
 -- mapper("n", "<Leader>s", ":so<CR>")
@@ -105,7 +107,7 @@ mapper("n", "<C-Left>", ":vertical resize +2<CR>")
 mapper("n", "<C-Right>", ":vertical resize -2<CR>")
 
 --Agregar ventana
-mapper("n", "<Leader>va", ":split<CR>") -- ventana arriba
+mapper("n", "<Leader>va", ":split<CR>")  -- ventana arriba
 mapper("n", "<Leader>vi", ":vsplit<CR>") -- ventana izquierda
 
 -- Cerrar una buffer
