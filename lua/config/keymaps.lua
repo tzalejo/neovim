@@ -64,6 +64,8 @@ mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 mapper("n", "<Leader>go", ":Gitsigns toggle_current_line_blame<CR>")
 mapper("n", "<Leader>gn", ":Gitsigns next_hunk<CR>")    -- movernos entre cambios de git
 mapper("n", "<Leader>gp", ":Gitsigns preview_hunk<CR>") -- vista de los cambios
+mapper("n", "<Leader>gr", ":Gitsigns reset_hunk<CR>")   -- resetea los cambios de git
+mapper("n", "<Leader>gg", ":Gitsigns stage_hunk<CR>")   -- agrega los cambios del archivo a stage
 
 -- Para recargar un archivo de forma manual
 -- mapper("n", "<Leader>s", ":so<CR>")
