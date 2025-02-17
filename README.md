@@ -58,6 +58,19 @@ nvim
 | Reducir todo los pliegues   | zr           |
 | Aplicar todo los pliegues   | zm           |
 
+### Laravel
+
+| Action                 | Mappings    |
+| ---------------------- | ----------- |
+| Listar menu de Laravel | Leader + ll |
+| Laravel artisan        | Leader + lt |
+| Laravel router         | Leader + le |
+| Laravel commands       | Leader + lc |
+| Laravel resources      | Leader + lo |
+| Laravel panel          | Leader + lp |
+| Laravel document       | Leader + lo |
+| Laravel make           | Leader + lm |
+
 ### Buffers
 
 | Action                                                              | Mappings      |
@@ -207,6 +220,7 @@ nvim
 | Git Commits (repository)          | Leader + gc |
 | Git Commits (current file)        | Leader + gC |
 | Git Status                        | Leader + gt |
+| Git Pull                          | Leader + ga |
 | Git Previous hunk                 | Leader + gp |
 | LSP Symbols                       | Leader + ls |
 | LSP Workspace Symbols             | Leader + lG |
