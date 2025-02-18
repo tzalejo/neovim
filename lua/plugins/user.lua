@@ -150,7 +150,8 @@ return {
     keys = {
       -- { "<leader>ga", ":Git fetch --all -p<cr>", desc = "Git fetch" },
       { "<leader>ga", ":Git pull<cr>", desc = "Git pull" },
-      { "<leader>gs", ":Git push<cr>", desc = "Git push" },
+      { "<leader>gh", ":Git push<cr>", desc = "Git push" },
+      { "<leader>gg", ":Git commit<cr>", desc = "Git commit" },
       -- { "<leader>gdh", ":diffget //2<cr>", desc = "Git diff grab from left" },
       -- { "<leader>gdl", ":diffget //3<cr>", desc = "Git diff grab from right" },
     },
