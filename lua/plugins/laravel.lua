@@ -13,14 +13,14 @@ return {
   },
   cmd = { "Laravel" },
   keys = {
-    { "<leader>ll", "<cmd>Laravel<cr>" },
-    { "<leader>lt", "<cmd>Laravel art<cr>" },
-    { "<leader>le", "<cmd>Laravel routes<cr>" },
-    { "<leader>lc", "<cmd>Laravel commands<cr>" },
-    { "<leader>lo", "<cmd>Laravel resources<cr>" },
-    { "<leader>lp", "<cmd>Laravel panel<cr>" },
-    { "<leader>do", "<cmd>Laravel art docs<cr>" },
-    { "<leader>lm", "<cmd>Laravel make<cr>" },
+    { "Ll", "<cmd>Laravel<cr>" },
+    { "La", "<cmd>Laravel art<cr>" },
+    { "Lr", "<cmd>Laravel routes<cr>" },
+    { "Lc", "<cmd>Laravel commands<cr>" },
+    { "Le", "<cmd>Laravel resources<cr>" },
+    { "Lp", "<cmd>Laravel panel<cr>" },
+    { "Ld", "<cmd>Laravel art docs<cr>" },
+    { "Lm", "<cmd>Laravel make<cr>" },
 
     -- { "<c-g>", "<cmd>Laravel view_finder<cr>" },
     -- { "<leader>ln", "<cmd>Laravel related<cr>" },
@@ -51,6 +51,30 @@ return {
       pickers = {
         enable = true,
         provider = "telescope",
+      },
+    },
+    environments = {
+      definitions = {
+        {
+          name = "docker-compose",
+          condition = {
+            file_exists = { "docker-compose.yml" },
+            executable = { "docker" },
+          },
+          commands = {
+            compose = { "docker-compose" },
+            {
+              commands = { "php", "composer", "npm" },
+              docker = {
+                container = {
+                  env = "APP_SERVICE",
+                  default = "app",
+                },
+                exec = { "docker-compose", "exec", "-it" },
+              },
+            },
+          },
+        },
       },
     },
   },
