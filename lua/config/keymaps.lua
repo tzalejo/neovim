@@ -37,7 +37,7 @@ mapper("v", "<leader>oo", ":!sort<CR>")
 -- vnoremap "<leader>or :!sort<CR>"
 
 -- listar los Keymaps en telescope
--- mapper("n", "<leader>key", ":Telescope keymaps<CR>")
+mapper("n", "<leader>key", ":Telescope keymaps<CR>")
 
 -- ver todo los archivos en la carpeta logs
 mapper("n", "<Leader>log", ":Telescope find_files search_dirs={'./storage/logs'} no_ignore=true<CR>")
