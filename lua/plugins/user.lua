@@ -157,4 +157,53 @@ return {
     },
     cmd = { "G", "Git" },
   },
+  {
+    "folke/snacks.nvim",
+    priority = 1000,
+    lazy = false,
+    keys = {
+      {
+        "<leader>gB",
+        function() require("snacks").gitbrowse() end,
+        desc = "Git Browse",
+        mode = { "n", "v" },
+      },
+      {
+        "<leader>gbl",
+        function() require("snacks").git.blame_line() end,
+        desc = "Git Blame Line",
+      },
+    },
+    ---@type snacks.Config
+    opts = {
+      -- your configuration comes here
+      -- or leave it empty to use the default settings
+      -- refer to the configuration section below
+      animate = { enabled = true },
+      bigfile = { enabled = true },
+      gitbrowse = { enabled = true },
+      image = {
+        enabled = true,
+        relative = "cursor",
+        border = "rounded",
+        focusable = false,
+        backdrop = false,
+        row = 1,
+        col = 1,
+      },
+      indent = { enabled = true },
+      picker = { enabled = true },
+      notifier = { enabled = true },
+      scratch = { enabled = false },
+      scroll = { enabled = false },
+      statuscolumn = { enabled = false },
+      words = { enabled = true },
+      explorer = { enabled = false },
+
+      quickfile = { enabled = true },
+      -- dashboard = { enabled = true },
+      -- input = { enabled = true },
+      -- scope = { enabled = true },
+    },
+  },
 }
