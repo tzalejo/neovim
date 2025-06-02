@@ -5,6 +5,17 @@ return {
     extra_groups = {
       "NormalFloat",
       "NvimTreeNormal",
+      "BufferLineTabClose",
+      "BufferLineBufferVisible",
+      "BufferLineBufferSelected",
+      "BufferLineBackground",
+      "BufferLineSeparator",
+      "BufferLineSeparatorVisible",
+      "BufferLineSeparatorSelected",
+      "BufferLineFill",
+      "TabLine",
+      "TabLineSel",
+      "TabLineFill",
     },
   },
   config = function(_, opts)
