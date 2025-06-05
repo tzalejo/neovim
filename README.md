@@ -410,3 +410,16 @@ nvim
 | Para mover el cursor a la ventana derecha                   | ctrl+h   |
 | Para mover el cursor a la ventana izquierda                 | ctrl+l   |
 | Para ver la keymapper configurados                          | \_key    |
+
+## SessionManager
+
+| Action                                                                                                                 | Mappings    |
+| ---------------------------------------------------------------------------------------------------------------------- | ----------- |
+| load_session: Selecciona y carga la sesión. (Tu sesión actual no aparecerá en la lista de forma predeterminada;        |             |
+| consulta la configuración a continuación).                                                                             | Leader + Sf |
+| load_last_session: Elimina todos los búferes e intenta :source de la última sesión guardada. Devuelve "true"           |             |
+| si se restauró la sesión y "false" en caso contrario.                                                                  | Leader + Sl |
+| load_current_dir_session: Elimina todos los búferes e intenta obtener la última sesión guardada del directorio         |             |
+| actual. Devuelve "true" si se restauró la sesión y "false" en caso contrario.                                          | Leader + S. |
+| save_current_session: Funciona como :mksession, pero guarda/crea el directorio actual como una sesión en sessions_dir. | Leader + Ss |
+| delete_session: Seleccionar y eliminar sesión.                                                                         | Leader + Sd |
