@@ -9,6 +9,11 @@ local mapper = function(mode, key, result) vim.api.nvim_set_keymap(mode, key, re
 -- TODO: General Keymaps
 ---------------------
 
+mapper("n", "<leader>Sl", "<cmd>SessionManager! load_last_session<cr>")
+mapper("n", "<leader>Ss", "<cmd>SessionManager! save_current_session<cr>")
+mapper("n", "<leader>Sd", "<cmd>SessionManager! delete_session<cr>")
+mapper("n", "<leader>Sf", "<cmd>sessionmanager! load_session<cr>")
+mapper("n", "<leader>S.", "<cmd>SessionManager! load_current_dir_session<cr>")
 -- Para guardar todo los archivos
 mapper("n", "<leader>W", ":wa<CR>")
 
