@@ -17,7 +17,6 @@ return {
         "phpactor",
         -- "stimulus_ls",
         "tailwindcss",
-        "tsserver",
       })
     end,
   },
