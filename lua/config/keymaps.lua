@@ -1,126 +1,163 @@
-vim.g.mapleader = " "
+-- This file contains custom key mappings for Neovim.
 
-local keymap = vim.keymap --for consisenes
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
 
--- Mapping helper
-local mapper = function(mode, key, result) vim.api.nvim_set_keymap(mode, key, result, { noremap = true, silent = true }) end
+-- Map Ctrl+b in insert mode to delete to the end of the word without leaving insert mode
+vim.keymap.set("i", "<C-b>", "<C-o>de")
 
----------------------
--- TODO: General Keymaps
----------------------
+-- Map Ctrl+c to escape from other modes
+vim.keymap.set({ "i", "n", "v" }, "<C-c>", [[<C-\><C-n>]])
 
-mapper("n", "<leader>Sl", "<cmd>SessionManager! load_last_session<cr>")
-mapper("n", "<leader>Ss", "<cmd>SessionManager! save_current_session<cr>")
-mapper("n", "<leader>Sd", "<cmd>SessionManager! delete_session<cr>")
-mapper("n", "<leader>Sf", "<cmd>sessionmanager! load_session<cr>")
-mapper("n", "<leader>S.", "<cmd>SessionManager! load_current_dir_session<cr>")
--- Para guardar todo los archivos
-mapper("n", "<leader>W", ":wa<CR>")
+-- Screen Keys
+vim.keymap.set({ "n" }, "<leader>uk", "<cmd>Screenkey<CR>")
 
--- Copy text to " register
-mapper("n", "<leader>y", '"+y')
-mapper("v", "<leader>y", '"+y')
-mapper("n", "<leader>Y", '"+Y')
+----- Tmux Navigation ------
+local nvim_tmux_nav = require("nvim-tmux-navigation")
 
--- Copy file paths
-mapper("n", "<leader>cp", '<cmd>let @+ = expand("%:p")<CR>') -- "Copy File Path"
+vim.keymap.set("n", "<C-h>", nvim_tmux_nav.NvimTmuxNavigateLeft) -- Navigate to the left pane
+vim.keymap.set("n", "<C-j>", nvim_tmux_nav.NvimTmuxNavigateDown) -- Navigate to the bottom pane
+vim.keymap.set("n", "<C-k>", nvim_tmux_nav.NvimTmuxNavigateUp) -- Navigate to the top pane
+vim.keymap.set("n", "<C-l>", nvim_tmux_nav.NvimTmuxNavigateRight) -- Navigate to the right pane
+vim.keymap.set("n", "<C-\\>", nvim_tmux_nav.NvimTmuxNavigateLastActive) -- Navigate to the last active pane
+vim.keymap.set("n", "<C-Space>", nvim_tmux_nav.NvimTmuxNavigateNext) -- Navigate to the next pane
 
---Reemplazar la palabra bajo el cursor en todo el buffer, como reenombrar
-mapper("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+----- OBSIDIAN -----
+vim.keymap.set("n", "<leader>oc", "<cmd>Obsidian check<CR>", { desc = "Obsidian Check Checkbox" })
+vim.keymap.set("n", "<leader>ot", "<cmd>Obsidian template<CR>", { desc = "Insert Obsidian Template" })
+vim.keymap.set("n", "<leader>oo", "<cmd>Obsidian open<CR>", { desc = "Open in Obsidian App" })
+vim.keymap.set("n", "<leader>ob", "<cmd>Obsidian backlinks<CR>", { desc = "Show Obsidian Backlinks" })
+vim.keymap.set("n", "<leader>ol", "<cmd>Obsidian links<CR>", { desc = "Show Obsidian Links" })
+vim.keymap.set("n", "<leader>on", "<cmd>Obsidian new<CR>", { desc = "Create New Note" })
+vim.keymap.set("n", "<leader>os", "<cmd>Obsidian search<CR>", { desc = "Search Obsidian" })
+vim.keymap.set("n", "<leader>oq", "<cmd>Obsidian quick-switch<CR>", { desc = "Quick Switch" })
 
--- Pegar sin sobrescribir el registro
-mapper("v", "p", '"_dP')
+----- OIL -----
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
---  borrar hacia atras del cursor
-mapper("n", "dx", "vb_d")
+-- Delete all buffers but the current one
+vim.keymap.set(
+  "n",
+  "<leader>bq",
+  '<Esc>:%bdelete|edit #|normal`"<Return>',
+  { desc = "Delete other buffers but the current one" }
+)
 
--- seleecionar todo
-mapper("n", "<C-a>", "gg<S-v>G")
+-- Disable key mappings in insert mode
+vim.api.nvim_set_keymap("i", "<A-j>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("i", "<A-k>", "<Nop>", { noremap = true, silent = true })
 
--- Ordenar una lista
-mapper("v", "<leader>oo", ":!sort<CR>")
--- vnoremap "<leader>or :!sort<CR>"
+-- Disable key mappings in normal mode
+vim.api.nvim_set_keymap("n", "<A-j>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "<A-k>", "<Nop>", { noremap = true, silent = true })
 
--- listar los Keymaps en telescope
-mapper("n", "<leader>key", ":Telescope keymaps<CR>")
+-- Disable key mappings in visual block mode
+vim.api.nvim_set_keymap("x", "<A-j>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "<A-k>", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "J", "<Nop>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("x", "K", "<Nop>", { noremap = true, silent = true })
 
--- ver todo los archivos en la carpeta logs
-mapper("n", "<Leader>log", ":Telescope find_files search_dirs={'./storage/logs'} no_ignore=true<CR>")
+-- Redefine Ctrl+s to save with the custom function
+vim.api.nvim_set_keymap("n", "<C-s>", ":lua SaveFile()<CR>", { noremap = true, silent = true })
 
---ver diagnotico de la configuracion
-mapper("n", "<leader>he", ":checkhealth<CR>") -- "Open .env file in a vertical split"
+-- Grep keybinding for visual mode - search selected text
+vim.keymap.set("v", "<leader>sg", function()
+  -- Get the selected text
+  local start_pos = vim.fn.getpos("'<")
+  local end_pos = vim.fn.getpos("'>")
+  local lines = vim.fn.getline(start_pos[2], end_pos[2])
 
--- quick env file edit
-mapper("n", "<leader>ee", ":vsp .env<CR>") -- "Open .env file in a vertical split"
-mapper("n", "<leader>dc", ":vsp docker-compose.yml<CR>") -- "Open docker-compose file in a vertical split"
+  if #lines == 0 then
+    return
+  end
 
-mapper("t", "<Esc><Esc>", "<C-\\><C-n>")
+  -- Handle single line selection
+  if #lines == 1 then
+    lines[1] = string.sub(lines[1], start_pos[3], end_pos[3])
+  else
+    -- Handle multi-line selection
+    lines[1] = string.sub(lines[1], start_pos[3])
+    lines[#lines] = string.sub(lines[#lines], 1, end_pos[3])
+  end
 
-mapper("i", "jj", "<ESC>")
+  local selected_text = table.concat(lines, "\n")
 
--- para que al eliminar un caracter no lo copie.
-mapper("n", "x", '"_x')
+  -- Escape special characters for grep
+  selected_text = vim.fn.escape(selected_text, "\\.*[]^$()+?{}")
 
--- para cerrar una ventana que tmb se puede hacer con leader + q
-mapper("n", "<Leader>sx", ":close<CR>")
+  -- Use the selected text for grep
+  if pcall(require, "snacks") then
+    require("snacks").picker.grep({ search = selected_text })
+  elseif pcall(require, "fzf-lua") then
+    require("fzf-lua").live_grep({ search = selected_text })
+  else
+    vim.notify("No grep picker available", vim.log.levels.ERROR)
+  end
+end, { desc = "Grep Selected Text" })
 
--- Git messenger
-mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
-mapper("n", "<Leader>go", ":Gitsigns toggle_current_line_blame<CR>")
-mapper("n", "<Leader>gn", ":Gitsigns next_hunk<CR>") -- movernos entre cambios de git
-mapper("n", "<Leader>gp", ":Gitsigns preview_hunk<CR>") -- vista de los cambios
+-- Grep keybinding for visual mode with G - search selected text at root level
+vim.keymap.set("v", "<leader>sG", function()
+  -- Get git root or fallback to cwd
+  local git_root = vim.fn.system("git rev-parse --show-toplevel 2>/dev/null"):gsub("\n", "")
+  local root = vim.v.shell_error == 0 and git_root ~= "" and git_root or vim.fn.getcwd()
 
--- Para recargar un archivo de forma manual
--- mapper("n", "<Leader>s", ":so<CR>")
+  -- Get the selected text
+  local start_pos = vim.fn.getpos("'<")
+  local end_pos = vim.fn.getpos("'>")
+  local lines = vim.fn.getline(start_pos[2], end_pos[2])
 
--- Para desplazarno en una linea
-mapper("n", "<A-h>", "0")
-mapper("n", "<A-l>", "$")
+  if #lines == 0 then
+    return
+  end
 
--- Save and Close
-mapper("n", "<Leader>w", ":w!<CR>")
-mapper("n", "<Leader>q", ":q<CR>")
-mapper("n", "mq", ":qa!<CR>")
-mapper("n", "qq", ":q!<CR>")
+  -- Handle single line selection
+  if #lines == 1 then
+    lines[1] = string.sub(lines[1], start_pos[3], end_pos[3])
+  else
+    -- Handle multi-line selection
+    lines[1] = string.sub(lines[1], start_pos[3])
+    lines[#lines] = string.sub(lines[#lines], 1, end_pos[3])
+  end
 
-mapper("n", "<esc>", ":noh<return><esc>")
+  local selected_text = table.concat(lines, "\n")
 
--- Duplitcate Line
-mapper("n", "tt", ":t.<CR>")
+  -- Escape special characters for grep
+  selected_text = vim.fn.escape(selected_text, "\\.*[]^$()+?{}")
 
--- comentar codigo
--- mapper("n", "cc", "<Plug>kommentary_line_default")
-mapper("n", "gc", "<Plug>kommentary_visual_default<C-c>")
+  -- Use the selected text for grep at root level
+  if pcall(require, "snacks") then
+    require("snacks").picker.grep({ search = selected_text, cwd = root })
+  elseif pcall(require, "fzf-lua") then
+    require("fzf-lua").live_grep({ search = selected_text, cwd = root })
+  else
+    vim.notify("No grep picker available", vim.log.levels.ERROR)
+  end
+end, { desc = "Grep Selected Text (Root Dir)" })
 
-mapper("n", "<Leader>to", ":TodoTelescope<CR>")
+-- Delete all marks
+vim.keymap.set("n", "<leader>md", function()
+  vim.cmd("delmarks!")
+  vim.cmd("delmarks A-Z0-9")
+  vim.notify("All marks deleted")
+end, { desc = "Delete all marks" })
 
--- Busqueda en un archivo
--- Hop.nvim
-mapper("n", "f", ":HopWord<CR>")
-mapper("n", "F", ":HopPattern<CR>")
-mapper("n", "ff", ":HopChar2<CR>") -- busqueda con dos letras
+-- Custom save function
+function SaveFile()
+  -- Check if a buffer with a file is open
+  if vim.fn.empty(vim.fn.expand("%:t")) == 1 then
+    vim.notify("No file to save", vim.log.levels.WARN)
+    return
+  end
 
--- Menu desplegable NERDTree
-mapper("n", "<Leader>nt", ":NvimTreeOpen<CR>")
-mapper("n", "<Leader>nn", ":NvimTreeClose<CR>")
---mapper("n", "<Leader>nu", ":NvimTreeRefresh<CR>")
+  local filename = vim.fn.expand("%:t") -- Get only the filename
+  local success, err = pcall(function()
+    vim.cmd("silent! write") -- Try to save the file without showing the default message
+  end)
 
--- Redimensiono las ventanas arriba, abajo, izquierda y derecha
-mapper("n", "<C-Up>", ":resize -2<CR>")
-mapper("n", "<C-Down>", ":resize +2<CR>")
-mapper("n", "<C-Left>", ":vertical resize +2<CR>")
-mapper("n", "<C-Right>", ":vertical resize -2<CR>")
-
---Agregar ventana
-mapper("n", "<Leader>va", ":split<CR>") -- ventana arriba
-mapper("n", "<Leader>vi", ":vsplit<CR>") -- ventana izquierda
-
--- Cerrar una buffer
--- mapper("n", "<C-w>", ":Bdelete<CR>")
-
--- Telescope
--- mapper("n", "<Leader>pr", ":Telescope treesitter<CR>")
--- mapper("n", "<Leader>fs", ":Telescope live_grep<CR>")
--- mapper("n", "<Leader>gst", ":Telescope git_status<CR>")
--- mapper("n", "<Leader>gcm", ":Telescope git_commits<CR>")
--- mapper("n", "<Leader>pw", ":Telescope grep_word<CR>")
+  if success then
+    vim.notify(filename .. " Saved!") -- Show only the custom message if successful
+  else
+    vim.notify("Error: " .. err, vim.log.levels.ERROR) -- Show the error message if it fails
+  end
+end
