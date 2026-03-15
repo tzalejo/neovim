@@ -18,8 +18,8 @@ return {
         -- add more arguments for adding more language servers
         "lua_ls",
         "eslint",
-        "phpactor",
-        -- "stimulus_ls",
+        "intelephense",
+        "ts_ls",
         "tailwindcss",
         "dockerls",
       })
