@@ -52,6 +52,9 @@ return {
       eslint = {
         root_dir = require("lspconfig.util").root_pattern(".eslintrc.json", ".eslintrc.js", ".eslintrc.cjs"),
       },
+      stimulus_ls = {
+        cmd = { "node", "--max-old-space-size=512", vim.fn.exepath "stimulus-language-server", "--stdio" },
+      },
     },
     -- customize how language servers are attached
     handlers = {

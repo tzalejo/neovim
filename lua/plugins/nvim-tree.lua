@@ -44,7 +44,7 @@ return {
       },
       git = {
         enable = true,
-        ignore = true,
+        ignore = false,
         timeout = 499,
       },
       view = {
