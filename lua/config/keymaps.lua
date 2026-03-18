@@ -69,7 +69,9 @@ mapper("n", "<Leader>gm", "<Plug>(git-messenger)<CR>")
 mapper("n", "<Leader>go", ":Gitsigns toggle_current_line_blame<CR>")
 mapper("n", "<Leader>gn", ":Gitsigns next_hunk<CR>") -- movernos entre cambios de git
 mapper("n", "<Leader>gp", ":Gitsigns preview_hunk<CR>") -- vista de los cambios
-
+mapper("n", "<Leader>gr", ":Gitsigns reset_hunk<CR>") -- descarta el hunk bajo el cursor
+mapper("n", "<Leader>gR", ":Gitsigns reset_buffer<CR>") -- descarta todos los cambios del archivo
+mapper("n", "<Leader>gW", ":Gitsigns reset_buffer<CR>:noautocmd write<CR>") -- descarta cambios y guarda sin formatter
 -- Para recargar un archivo de forma manual
 -- mapper("n", "<Leader>s", ":so<CR>")
 
