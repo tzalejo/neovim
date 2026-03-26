@@ -4,9 +4,14 @@
 
 ---@type LazySpec
 return {
+  {
+    "williamboman/mason.nvim",
+    version = "^1.0.0",
+  },
   -- use mason-lspconfig to configure LSP installations
   {
     "williamboman/mason-lspconfig.nvim",
+    version = "^1.0.0",
     -- overrides `require("mason-lspconfig").setup(...)`
     opts = function(_, opts)
       opts.ensure_installed = vim.tbl_filter(
