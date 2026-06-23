@@ -362,7 +362,7 @@ nvim
 | Para eliminar un parrafo en html osea una etiqueta. | dat      |
 | Para eliminar el continido de una etiqueta en html  | dit      |
 
-## Forma de escribir en bloque varias lienas a la vez, en 3 pasos:
+## Forma de escribir en bloque varias lienas a la vez, en 3 pasos
 
 | Action                                                                                              | Mappings |
 | --------------------------------------------------------------------------------------------------- | -------- |
@@ -389,7 +389,7 @@ nvim
 | ------------------------------------------------------------- | -------- |
 | Alinea todo el parrafo a partir, en este caso, a partir de => | gaip=>   |
 
-## La manipulación del fichero (abrir, guardar, salir): Los comandos básicos a la hora de editar ficheros son:
+## La manipulación del fichero (abrir, guardar, salir): Los comandos básicos a la hora de editar ficheros son
 
 | Action                                                                                               | Mappings |
 | ---------------------------------------------------------------------------------------------------- | -------- |

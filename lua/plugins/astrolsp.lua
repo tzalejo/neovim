@@ -28,6 +28,7 @@ return {
           "javascript",
           "lua",
           "blade",
+          "markdown",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
           -- "python",
