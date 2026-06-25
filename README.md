@@ -273,6 +273,36 @@ nvim
 
 # Comandos mios
 
+## Treesitter Text Objects
+
+Navegación semántica del código usando la sintaxis del árbol (treesitter).
+Los comandos de movimiento también funcionan como operadores (ej: `dgf` borra hasta la próxima función).
+
+### Movimiento (modo normal)
+
+| Action                                 | Mappings |
+| -------------------------------------- | -------- |
+| Salta al inicio de la próxima función  | gf       |
+| Salta al inicio de la función anterior | gF       |
+| Salta al inicio de la próxima clase    | gm       |
+| Salta al inicio de la clase anterior   | gM       |
+| Salta al próximo argumento de función  | ga       |
+| Salta al argumento anterior            | gA       |
+
+### Selección (modo visual / operador)
+
+Se combinan con operadores: `v` (seleccionar), `d` (borrar), `y` (copiar), `c` (cambiar).
+Ejemplos: `vaf` selecciona la función, `daa` elimina un argumento limpiamente, `cia` reemplaza el valor de un argumento.
+
+| Action                            | Mappings |
+| --------------------------------- | -------- |
+| Función completa (firma + cuerpo) | af       |
+| Solo el cuerpo de la función      | if       |
+| Clase completa                    | ac       |
+| Solo el cuerpo de la clase        | ic       |
+| Argumento incluyendo la coma      | aa       |
+| Solo el valor del argumento       | ia       |
+
 ### Comandos básicos: movimiento, inserción y borrado
 
 | Action                                                                                              | Mappings |

@@ -1,6 +1,15 @@
 vim.g.mapleader = " "
 vim.g.snippets = "luasnip"
 
+-- Neovim 0.12.2 regression: injection queries can yield nil or stale nodes;
+-- get_range doesn't guard against them and crashes the highlighter.
+local orig_get_range = vim.treesitter.get_range
+vim.treesitter.get_range = function(node, source, metadata)
+  if not node then return { 0, 0, 0, 0, 0, 0 } end
+  local ok, r = pcall(orig_get_range, node, source, metadata)
+  return ok and r or { 0, 0, 0, 0, 0, 0 }
+end
+
 local opt = vim.opt -- for conciseness
 
 -- line numbers
