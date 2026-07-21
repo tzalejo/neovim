@@ -3,6 +3,7 @@ local luasnip = require "luasnip"
 return { -- override nvim-cmp plugin
   {
     "hrsh7th/cmp-nvim-lsp",
+    config = true,
   },
   {
     "L3MON4D3/LuaSnip",
