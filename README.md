@@ -33,30 +33,64 @@ nvim
 
 ### General Mappings
 
-| Action                      | Mappings     |
-| --------------------------- | ------------ |
-| Leader                      | key Space    |
-| Local Leader key            | ,            |
-| Resize up                   | Ctrl + Up    |
-| Resize Down                 | Ctrl + Down  |
-| Resize Left                 | Ctrl + Left  |
-| Resize Right                | Ctrl + Right |
-| Up Window                   | Ctrl + k     |
-| Down Window                 | Ctrl + j     |
-| Left Window                 | Ctrl + h     |
-| Right Window                | Ctrl + l     |
-| Force Write                 | Ctrl + s     |
-| Force Quit                  | Ctrl + q     |
-| New File                    | Leader + n   |
-| Close Buffer                | Leader + c   |
-| Next Tab (real vim tab)     | ]t           |
-| Previous Tab (real vim tab) | [t           |
-| Comment                     | Leader + \/  |
-| Horizontal Split            | \\           |
-| Vertical Split              | \|           |
-| Alterar pliegue             | za           |
-| Reducir todo los pliegues   | zr           |
-| Aplicar todo los pliegues   | zm           |
+| Action                                             | Mappings                      |
+| -------------------------------------------------- | ----------------------------- |
+| Leader                                             | key Space                     |
+| Local Leader key                                   | ,                             |
+| Resize up                                          | Ctrl + Up                     |
+| Resize Down                                        | Ctrl + Down                   |
+| Resize Left                                        | Ctrl + Left                   |
+| Resize Right                                       | Ctrl + Right                  |
+| Up Window                                          | Ctrl + k                      |
+| Down Window                                        | Ctrl + j                      |
+| Left Window                                        | Ctrl + h                      |
+| Right Window                                       | Ctrl + l                      |
+| Force Write (función custom con notify)            | Ctrl + s                      |
+| Force Quit                                         | Ctrl + q                      |
+| New File                                           | Leader + n                    |
+| Close Buffer                                       | Leader + c                    |
+| Next Tab (real vim tab)                            | ]t                            |
+| Previous Tab (real vim tab)                        | [t                            |
+| Comment                                            | Leader + \/                   |
+| Horizontal Split                                   | \\                            |
+| Vertical Split                                     | \|                            |
+| Alterar pliegue                                    | za                            |
+| Reducir todo los pliegues                          | zr                            |
+| Aplicar todo los pliegues                          | zm                            |
+| Copiar al portapapeles del sistema                 | y, Leader + y (normal/visual) |
+| Copiar línea al portapapeles del sistema           | Leader + Y                    |
+| Copiar path del archivo actual                     | Leader + cp                   |
+| Renombrar palabra bajo el cursor en todo el buffer | Leader + s                    |
+| Borrar hacia atrás del cursor                      | dx                            |
+| Seleccionar todo el documento                      | Ctrl + a                      |
+| Ordenar selección (visual)                         | Leader + oo                   |
+| Listar Keymaps (Telescope)                         | Leader + key                  |
+| Buscar archivos en storage/logs                    | Leader + log                  |
+| Checkhealth                                        | Leader + he                   |
+| Abrir .env en split vertical                       | Leader + ee                   |
+| Cerrar ventana actual                              | Leader + sx                   |
+| Git messenger                                      | Leader + gm                   |
+| Toggle git blame de línea actual                   | Leader + go                   |
+| Git siguiente hunk                                 | Leader + gn                   |
+| Git preview del hunk                               | Leader + gp                   |
+| Git descartar hunk bajo el cursor                  | Leader + gr                   |
+| Git descartar todos los cambios del archivo        | Leader + gR                   |
+| Git descartar cambios y guardar sin formatter      | Leader + gW                   |
+| Ir al inicio de la línea                           | Alt + h                       |
+| Ir al final de la línea                            | Alt + l                       |
+| Guardar (forzado, sin custom notify)               | Leader + w                    |
+| Cerrar buffer/ventana actual                       | Leader + q                    |
+| Salir de todo sin guardar                          | mq                            |
+| Salir sin guardar                                  | qq                            |
+| Duplicar línea actual                              | tt                            |
+| Todo (Telescope)                                   | Leader + to                   |
+| Hop a palabra                                      | f                             |
+| Hop a patrón                                       | F                             |
+| Hop con dos letras                                 | ff                            |
+| Abrir NvimTree                                     | Leader + nt                   |
+| Cerrar NvimTree                                    | Leader + nn                   |
+| Split horizontal (ventana arriba)                  | Leader + va                   |
+| Split vertical (ventana izquierda)                 | Leader + vi                   |
 
 ### Laravel
 

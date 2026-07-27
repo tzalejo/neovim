@@ -13,5 +13,7 @@ return {
   { import = "astrocommunity.utility.noice-nvim" },
   { import = "astrocommunity.recipes.telescope-nvchad-theme" },
   { import = "astrocommunity.colorscheme.catppuccin" },
+  { import = "astrocommunity.editing-support.conform-nvim" },
+  { import = "astrocommunity.utility.mason-tool-installer-nvim" },
   -- import/override with your plugins folder
 }
