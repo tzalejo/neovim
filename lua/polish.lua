@@ -11,8 +11,19 @@ vim.filetype.add {
   },
   filename = {
     ["Foofile"] = "fooscript",
+    [".env"] = "dotenv",
   },
   pattern = {
     ["~/%.config/foo/.*"] = "fooscript",
+    ["%.env%..*"] = "dotenv",
+    [".*%.env"] = "dotenv",
   },
 }
+
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = "dotenv",
+  callback = function(args)
+    vim.bo.commentstring = "# %s"
+    pcall(vim.treesitter.start, args.buf, "bash")
+  end,
+})
