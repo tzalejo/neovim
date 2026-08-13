@@ -27,3 +27,7 @@ vim.api.nvim_create_autocmd("FileType", {
     pcall(vim.treesitter.start, args.buf, "bash")
   end,
 })
+
+-- Disable Neovim's native progress bar (OSC 9;4), which kitty renders
+-- as a desktop notification on every write/progress event.
+pcall(vim.api.nvim_del_augroup_by_name, "nvim.progress")
