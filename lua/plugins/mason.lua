@@ -27,6 +27,7 @@ return {
         "ts_ls",
         "tailwindcss",
         "dockerls",
+        "marksman",
       })
     end,
   },

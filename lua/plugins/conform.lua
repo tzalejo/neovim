@@ -9,5 +9,10 @@ return {
       markdown = { "prettier" },
       blade = { "blade-formatter" },
     },
+    formatters = {
+      prettier = {
+        prepend_args = { "--ignore-path", "/dev/null" },
+      },
+    },
   },
 }
