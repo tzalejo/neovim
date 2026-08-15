@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter-textobjects",
-  branch = "main",
+  branch = "master",
   dependencies = { "nvim-treesitter/nvim-treesitter" },
   config = function()
     local move = require "nvim-treesitter.textobjects.move"
@@ -24,14 +24,11 @@ return {
       move.goto_previous_start("@class.outer", "textobjects")
     end, { desc = "Clase anterior" })
 
-    -- ga → salta al próximo argumento de función
-    -- gA → salta al argumento anterior
-    vim.keymap.set({ "n", "x", "o" }, "ga", function()
-      move.goto_next_start("@parameter.inner", "textobjects")
-    end, { desc = "Siguiente argumento" })
-    vim.keymap.set({ "n", "x", "o" }, "gA", function()
-      move.goto_previous_start("@parameter.inner", "textobjects")
-    end, { desc = "Argumento anterior" })
+    -- ga/gA: deshabilitados. Bug upstream en nvim-treesitter (rama master):
+    -- la query de @parameter.* usa #make-range! con el capture "parameter.inner"
+    -- (con punto), y query.lua busca esa clave como plana cuando en realidad
+    -- se guarda anidada, así que siempre resuelve a nil y crashea tsrange.lua.
+    -- Dejar "ga" libre además permite que vim-easy-align use su propio "ga".
 
     -- af → selecciona la función completa (firma + cuerpo). ej: vaf, daf(corta), yaf(copia)
     -- if → selecciona solo el cuerpo de la función. ej: vif, dif
@@ -51,13 +48,6 @@ return {
       select.select_textobject("@class.inner", "textobjects")
     end, { desc = "Cuerpo de la clase" })
 
-    -- aa → selecciona el argumento incluyendo la coma. ej: daa elimina el argumento limpiamente
-    -- ia → selecciona solo el valor del argumento, sin la coma. ej: cia reemplaza el argumento
-    vim.keymap.set({ "x", "o" }, "aa", function()
-      select.select_textobject("@parameter.outer", "textobjects")
-    end, { desc = "Argumento con coma" })
-    vim.keymap.set({ "x", "o" }, "ia", function()
-      select.select_textobject("@parameter.inner", "textobjects")
-    end, { desc = "Solo el argumento" })
+    -- aa/ia: deshabilitados por el mismo bug upstream que ga/gA (ver arriba).
   end,
 }
